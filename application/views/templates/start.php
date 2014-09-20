@@ -8,7 +8,7 @@ $this->view('templates/header');
 $this->view('templates/main');
 ?>
 
-<script src="<?=URL.'lib/bootstrap/js/bootstrap.js'?>"></script>
+<script src="<?=base_url('lib/bootstrap/js/bootstrap.js')?>"></script>
 <script type="text/javascript">
     $("[rel=tooltip]").tooltip();
     $(function() {

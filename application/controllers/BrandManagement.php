@@ -9,10 +9,8 @@
 
 class BrandManagement extends MY_Controller
 {
-    public function koko()
-    {
-        echo URL.'lib/bootstrap/css/bootstrap.css';
-    }
+    private $viewDirectoryName="BrandManagement";
+
     public function __construct()
     {
         parent::__construct();
@@ -22,11 +20,11 @@ class BrandManagement extends MY_Controller
     function index()
     {
         $data['brands']=$this->BrandModel->getAll();
-        $this->load->template('Brand/index',$data);
+        $this->load->template($this->viewDirectoryName.'/index',$data);
     }
     function create()
     {
-        $this->load->template("Brand/create");
+        $this->load->template($this->viewDirectoryName."/create");
     }
 
     function insert()
@@ -41,7 +39,7 @@ class BrandManagement extends MY_Controller
         $brand=array('name'=>$name,'photo'=>$picturePath);
         if($this->BrandModel->insert($brand))
         {
-            redirect('BrandManagement/index');
+            redirect($this->viewDirectoryName.'/index');
         }
     }
     function delete()
@@ -52,13 +50,13 @@ class BrandManagement extends MY_Controller
         unlink($brand->photo);
         unlink($thumbPhoto);
         $this->BrandModel->delete($brandID);
-        redirect('BrandManagement/index');
+        redirect($this->viewDirectoryName.'/index');
     }
     function edit()
     {
         $brandID=$this->uri->segment(3);
         $data['brand']=$this->BrandModel->get($brandID);
-        $this->load->view('Brand/edit',$data);
+        $this->load->view($this->viewDirectoryName.'/edit',$data);
     }
     function update()
     {

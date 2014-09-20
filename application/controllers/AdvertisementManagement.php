@@ -9,6 +9,8 @@
 
 class AdvertisementManagement extends MY_Controller
 {
+    private $viewDirectoryName="AdvertisementManagement";
+
     public function __construct()
     {
         parent::__construct();
@@ -20,12 +22,12 @@ class AdvertisementManagement extends MY_Controller
     {
         $data['ads']=$this->AdvertisementModel->getAll();
         $data['languages']=$this->LanguageModel->getAll();
-        $this->load->template('Advertisement/index',$data);
+        $this->load->template($this->viewDirectoryName.'/index',$data);
     }
     function create()
     {
         $data['languages']=$this->LanguageModel->getAll();
-        $this->load->template("Advertisement/create",$data);
+        $this->load->template($this->viewDirectoryName."/create",$data);
     }
 
     function insert()
@@ -44,7 +46,7 @@ class AdvertisementManagement extends MY_Controller
         }
         $advertisement=array('languageID'=>$languageID,'title'=>$title,'text'=>$text,'photo'=>$picturePath);
         if($this->AdvertisementModel->insert($advertisement))
-            redirect('AdvertisementManagement/index');
+            redirect($this->viewDirectoryName.'/index');
     }
     function delete()
     {
@@ -54,13 +56,13 @@ class AdvertisementManagement extends MY_Controller
         unlink($ad->photo);
         unlink($thumbPhoto);
         $this->AdvertisementModel->delete($advertisementID);
-        redirect('AdvertisementManagement/index');
+        redirect($this->viewDirectoryName.'/index');
     }
     function edit()
     {
         $advertisementID=$this->uri->segment(3);
         $data['advertise']=$this->AdvertisementModel->get($advertisementID);
-        $this->load->template('Advertisement/edit',$data);
+        $this->load->template($this->viewDirectoryName.'/edit',$data);
     }
     function update()
     {
@@ -72,7 +74,6 @@ class AdvertisementManagement extends MY_Controller
 
         $advertisement=array('id'=>$id,'languageID'=>$languageID,'title'=>$title,'text'=>$text,'photo'=>'');
         $this->AdvertisementModel->update($advertisement);
-        redirect('AdvertisementManagement/index');
-
+        redirect($this->viewDirectoryName.'/index');
     }
 }

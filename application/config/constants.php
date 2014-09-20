@@ -18,11 +18,6 @@ define('FILE_WRITE_MODE', 0666);
 define('DIR_READ_MODE', 0755);
 define('DIR_WRITE_MODE', 0777);
 
-define('URL','http://localhost/clix/');
-define('IMG',URL.'images/');
-define('CSS',URL.'assets/css/');
-define('JS',URL.'assets/js/');
-
 /*
 |--------------------------------------------------------------------------
 | File Stream Modes

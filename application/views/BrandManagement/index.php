@@ -24,7 +24,7 @@
                     ?>
                     <tr>
                         <td><?=$counter?></td>
-                        <td class="photoCol"><?=img(URL.$this->generateThumbPhoto($brand->photo))?></td>
+                        <td class="photoCol"><?=img($this->generateThumbPhoto($brand->photo))?></td>
                         <td><?=$brand->name?></td>
                         <td>
                             <a href="user.html"><i class="icon-pencil"></i></a>
