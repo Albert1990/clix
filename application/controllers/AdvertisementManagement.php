@@ -42,7 +42,7 @@ class AdvertisementManagement extends MY_Controller
         if(!empty($_FILES['userfile']['name']))
         {
             $picturePath=$this->do_upload($this->imagesDestPath);
-            $this->resize($picturePath,150,125);
+            $this->resize($picturePath,150,125,true);
         }
         $advertisement=array('languageID'=>$languageID,'title'=>$title,'text'=>$text,'photo'=>$picturePath);
         if($this->AdvertisementModel->insert($advertisement))
@@ -62,6 +62,7 @@ class AdvertisementManagement extends MY_Controller
     {
         $advertisementID=$this->uri->segment(3);
         $data['advertise']=$this->AdvertisementModel->get($advertisementID);
+        $data['languages']=$this->LanguageModel->getAll();
         $this->load->template($this->viewDirectoryName.'/edit',$data);
     }
     function update()
@@ -70,9 +71,25 @@ class AdvertisementManagement extends MY_Controller
         $languageID=$this->input->post('languageID',true);
         $title=$this->input->post('title',true);
         $text=$this->input->post('text',true);
+        $oldPicPath=$this->input->post('oldPicPath',true);
 
+        $picturePath='';
 
-        $advertisement=array('id'=>$id,'languageID'=>$languageID,'title'=>$title,'text'=>$text,'photo'=>'');
+        if (empty($_FILES['userfile']['name']))
+        {
+            //echo 'no photo';
+            $picturePath=$oldPicPath;
+        }
+        else
+        {
+            //echo 'has photo';
+            if(file_exists($oldPicPath))
+                unlink($oldPicPath);
+            $picturePath=$this->do_upload($this->imagesDestPath);
+            $this->resize($picturePath,150,125,true);
+        }
+
+        $advertisement=array('id'=>$id,'languageID'=>$languageID,'title'=>$title,'text'=>$text,'photo'=>$picturePath);
         $this->AdvertisementModel->update($advertisement);
         redirect($this->viewDirectoryName.'/index');
     }

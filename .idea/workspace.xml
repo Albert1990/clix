@@ -6,29 +6,34 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/brain_managment.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410735617296" ignored="false" />
     <file path="/advertisemnet_managment.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410736373512" ignored="false" />
-    <file path="/MY_Controller.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411058706624" ignored="false" />
+    <file path="/MY_Controller.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411244673312" ignored="false" />
     <file path="/a.dummy" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410736472271" ignored="false" />
     <file path="/DeviceAttributeManagment.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410736168758" ignored="false" />
     <file path="/NewsManagment.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410736458309" ignored="false" />
     <file path="/OfferManagment.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410736288711" ignored="false" />
-    <file path="/BrandManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411236849287" ignored="false" />
+    <file path="/BrandManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411258056804" ignored="false" />
     <file path="/DeviceAttributeManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410736447426" ignored="false" />
     <file path="/OfferManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410736467476" ignored="false" />
     <file path="/SliderManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410736480134" ignored="false" />
     <file path="/BrandModel.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411057848474" ignored="false" />
-    <file path="/index.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411236937859" ignored="false" />
+    <file path="/index.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411262110937" ignored="false" />
     <file path="/AdvertisementModel.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410827243014" ignored="false" />
-    <file path="/AdvertisementManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411236765535" ignored="false" />
-    <file path="/MY_Loader.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410988736488" ignored="false" />
-    <file path="/header.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411238526725" ignored="false" />
+    <file path="/AdvertisementManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411245159100" ignored="false" />
+    <file path="/MY_Loader.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411242934820" ignored="false" />
+    <file path="/header.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411261297653" ignored="false" />
     <file path="/footer.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410988458549" ignored="false" />
     <file path="/main.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410991313420" ignored="false" />
     <file path="/start.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411238537650" ignored="false" />
     <file path="/body.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410988837954" ignored="false" />
     <file path="/create.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411057055170" ignored="false" />
     <file path="/NewsModel.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411236977729" ignored="false" />
-    <file path="/NewsManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411237239265" ignored="false" />
+    <file path="/NewsManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411244791386" ignored="false" />
     <file path="/Home.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411237452355" ignored="false" />
+    <file path="/edit.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411258013399" ignored="false" />
+    <file path="/sidebar.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411244912369" ignored="false" />
+    <file path="/UserCartManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411249945867" ignored="false" />
+    <file path="/UserCartModel.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411249922770" ignored="false" />
+    <file path="/main.js" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411261405531" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,38 +53,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NewsManagement.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/NewsManagement.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="5" selection-start="916" selection-end="916" vertical-scroll-proportion="-15.230769">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/NewsManagement/index.php">
+        <entry file="file://$PROJECT_DIR$/application/views/BrandManagement/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="37" selection-start="130" selection-end="130" vertical-scroll-proportion="-2.6153846">
+            <state line="33" column="119" selection-start="1311" selection-end="1311" vertical-scroll-proportion="-9.153846">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="25" selection-start="1097" selection-end="1097" vertical-scroll-proportion="-19.807692">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="constants.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config/constants.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="31" selection-start="780" selection-end="780" vertical-scroll-proportion="-11.769231">
-              <folding />
+            <state line="20" column="2" selection-start="465" selection-end="465" vertical-scroll-proportion="0.41391304">
+              <folding>
+                <element signature="e#0#158#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,52 +76,7 @@
       <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/templates/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="63" selection-start="1915" selection-end="1915" vertical-scroll-proportion="-15.230769">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="start.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/templates/start.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="25" selection-start="260" selection-end="260" vertical-scroll-proportion="-7.8461537">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/BrandManagement/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BrandModel.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/BrandModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BrandManagement.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/BrandManagement.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="47" selection-start="326" selection-end="326" vertical-scroll-proportion="-7.1923075">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Home.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Home.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="19" selection-start="246" selection-end="246" vertical-scroll-proportion="-4.576923">
+            <state line="50" column="78" selection-start="2032" selection-end="2032" vertical-scroll-proportion="-19.307692">
               <folding />
             </state>
           </provider>
@@ -148,22 +92,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/views/Brand/create.php" />
-        <option value="$PROJECT_DIR$/application/views/templates/main.php" />
-        <option value="$PROJECT_DIR$/application/models/BrandModel.php" />
-        <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
-        <option value="$PROJECT_DIR$/application/views/Brand/index.php" />
-        <option value="$PROJECT_DIR$/application/controllers/AdvertisementManagement.php" />
         <option value="$PROJECT_DIR$/application/views/NewsManagement/index.php" />
-        <option value="$PROJECT_DIR$/application/models/NewsModel.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Home.php" />
-        <option value="$PROJECT_DIR$/application/controllers/BrandManagement.php" />
+        <option value="$PROJECT_DIR$/application/views/NewsManagement/edit.php" />
+        <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
         <option value="$PROJECT_DIR$/application/controllers/NewsManagement.php" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
-        <option value="$PROJECT_DIR$/application/config/constants.php" />
+        <option value="$PROJECT_DIR$/application/views/templates/sidebar.php" />
+        <option value="$PROJECT_DIR$/application/views/AdvertisementManagement/edit.php" />
+        <option value="$PROJECT_DIR$/application/controllers/AdvertisementManagement.php" />
+        <option value="$PROJECT_DIR$/application/views/AdvertisementManagement/index.php" />
+        <option value="$PROJECT_DIR$/application/controllers/UserCartManagement.php" />
+        <option value="$PROJECT_DIR$/application/views/UserCartManagement/index.php" />
+        <option value="$PROJECT_DIR$/application/models/UserCartModel.php" />
+        <option value="$PROJECT_DIR$/application/views/BrandManagement/edit.php" />
+        <option value="$PROJECT_DIR$/application/controllers/BrandManagement.php" />
         <option value="$PROJECT_DIR$/application/views/templates/header.php" />
-        <option value="$PROJECT_DIR$/application/views/templates/start.php" />
         <option value="$PROJECT_DIR$/application/views/BrandManagement/index.php" />
+        <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
   </component>
@@ -213,6 +157,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ci" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -288,65 +246,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NewsManagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ci" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clix" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="BrandManagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ci" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clix" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ci" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clix" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -359,7 +259,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../kattan/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kattan/admin" />
     <property name="FullScreen" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -399,9 +299,9 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26190478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -472,108 +372,117 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/AdvertisementModel.php">
+    <entry file="file://$PROJECT_DIR$/application/views/templates/sidebar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/AdvertisementManagement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="4" selection-start="291" selection-end="344" vertical-scroll-proportion="-7.1923075">
+        <state line="11" column="54" selection-start="695" selection-end="695" vertical-scroll-proportion="0.3488806">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/NewsManagement/edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/NewsManagement/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="30" selection-start="550" selection-end="550" vertical-scroll-proportion="0.3715847">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/NewsModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="5" selection-start="763" selection-end="763" vertical-scroll-proportion="0.31876138">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/BrandModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="19" selection-start="246" selection-end="246" vertical-scroll-proportion="-4.576923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/BrandManagement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="47" selection-start="326" selection-end="326" vertical-scroll-proportion="-7.1923075">
+        <state line="17" column="16" selection-start="0" selection-end="2306" vertical-scroll-proportion="0.5391791">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/NewsManagement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="5" selection-start="916" selection-end="916" vertical-scroll-proportion="-15.230769">
+        <state line="74" column="8" selection-start="2427" selection-end="2904" vertical-scroll-proportion="0.38069215">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/NewsManagement/index.php">
+    <entry file="file://$PROJECT_DIR$/application/views/AdvertisementManagement/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="37" selection-start="130" selection-end="130" vertical-scroll-proportion="-2.6153846">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/AdvertisementManagement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="25" selection-start="1097" selection-end="1097" vertical-scroll-proportion="-19.807692">
+        <state line="73" column="8" selection-start="2540" selection-end="3017" vertical-scroll-proportion="0.13296904">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/constants.php">
+    <entry file="file://$PROJECT_DIR$/application/models/NewsModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="31" selection-start="780" selection-end="780" vertical-scroll-proportion="-11.769231">
+        <state line="21" column="25" selection-start="559" selection-end="559" vertical-scroll-proportion="0.46448088">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/UserCartManagement/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/UserCartManagement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="65" selection-start="599" selection-end="599" vertical-scroll-proportion="-11.115385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/UserCartManagement/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/UserCartModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="318" selection-end="318" vertical-scroll-proportion="-5.230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/AdvertisementManagement/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="19" selection-start="0" selection-end="2354" vertical-scroll-proportion="0.47574627">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/BrandManagement/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="17" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.8998178">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/BrandManagement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="52" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.030965392">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="63" selection-start="1915" selection-end="1915" vertical-scroll-proportion="-15.230769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/start.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="260" selection-end="260" vertical-scroll-proportion="-7.8461537">
+        <state line="50" column="78" selection-start="2032" selection-end="2032" vertical-scroll-proportion="-19.307692">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/BrandManagement/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="33" column="119" selection-start="1311" selection-end="1311" vertical-scroll-proportion="-9.153846">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="2" selection-start="465" selection-end="465" vertical-scroll-proportion="0.41391304">
+          <folding>
+            <element signature="e#0#158#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

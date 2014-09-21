@@ -10,6 +10,7 @@
 class NewsManagement extends MY_Controller
 {
     private $viewDirectoryName="NewsManagement";
+    private $data;
 
     public function __construct()
     {
@@ -42,7 +43,7 @@ class NewsManagement extends MY_Controller
         if(!empty($_FILES['userfile']['name']))
         {
             $picturePath=$this->do_upload($this->imagesDestPath);
-            $this->resize($picturePath,150,125);
+            $this->resize($picturePath,150,125,true);
         }
         $news=array('languageID'=>$languageID,'title'=>$title,'text'=>$text,'photo'=>$picturePath);
         if($this->NewsModel->insert($news))
@@ -62,6 +63,7 @@ class NewsManagement extends MY_Controller
     {
         $newsID=$this->uri->segment(3);
         $data['news']=$this->NewsModel->get($newsID);
+        $data['languages']=$this->LanguageModel->getAll();
         $this->load->template($this->viewDirectoryName.'/edit',$data);
     }
     function update()
@@ -70,10 +72,26 @@ class NewsManagement extends MY_Controller
         $languageID=$this->input->post('languageID',true);
         $title=$this->input->post('title',true);
         $text=$this->input->post('text',true);
+        $oldPicPath=$this->input->post('oldPicPath',true);
 
+        $picturePath='';
 
-        $news=array('id'=>$id,'languageID'=>$languageID,'title'=>$title,'text'=>$text,'photo'=>'');
-        $this->AdvertisementModel->update($news);
+        if (empty($_FILES['userfile']['name']))
+        {
+            //echo 'no photo';
+            $picturePath=$oldPicPath;
+        }
+        else
+        {
+            //echo 'has photo';
+            if(file_exists($oldPicPath))
+                unlink($oldPicPath);
+            $picturePath=$this->do_upload($this->imagesDestPath);
+            $this->resize($picturePath,150,125,true);
+        }
+
+        $news=array('id'=>$id,'languageID'=>$languageID,'title'=>$title,'text'=>$text,'photo'=>$picturePath);
+        $this->NewsModel->update($news);
         redirect($this->viewDirectoryName.'/index');
 
     }

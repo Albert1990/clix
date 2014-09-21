@@ -13,7 +13,7 @@
                     <th>#</th>
                     <th>Language</th>
                     <th>Title</th>
-                    <th>Brand Photo</th>
+                    <th>Photo</th>
                     <th style="width: 26px;"></th>
                 </tr>
                 </thead>
@@ -31,7 +31,7 @@
                         <td><?=$ad->title?></td>
                         <td class="photoCol"><?=img($this->generateThumbPhoto($ad->photo))?></td>
                         <td>
-                            <a href="user.html"><i class="icon-pencil"></i></a>
+                            <a href="<?=site_url('NewsManagement/edit/'.$ad->id)?>"><i class="icon-pencil"></i></a>
 
                             <a href="<?=site_url('NewsManagement/delete/'.$ad->id)?>" role="button"><i class="icon-remove"></i></a>
                         </td>

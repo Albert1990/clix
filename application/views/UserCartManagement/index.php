@@ -2,7 +2,7 @@
     <div class="row-fluid">
 
         <div class="btn-toolbar">
-            <a href="<?=site_url('AdvertisementManagement/create')?>" class="btn btn-primary"><i class="icon-plus"></i>New Advertisement</a>
+            <a href="<?=site_url('NewsManagement/create')?>" class="btn btn-primary"><i class="icon-plus"></i>New News</a>
             <div class="btn-group">
             </div>
         </div>
@@ -11,29 +11,33 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Language</th>
-                    <th>Title</th>
+                    <th>User Name</th>
+                    <th>Mobile Number</th>
+                    <th>Device Name</th>
+                    <th>Device Photo</th>
                     <th>Brand Photo</th>
+                    <th>Date</th>
+                    <th>Commands</th>
                     <th style="width: 26px;"></th>
                 </tr>
                 </thead>
                 <tbody>
                 <?
-                if($ads)
+                if($userCarts)
                 {
                 $counter=1;
-                foreach( $ads as $ad)
+                foreach( $userCarts as $userCart)
                 {
                     ?>
                     <tr>
                         <td><?=$counter?></td>
-                        <td><?=$ad->languageName?></td>
-                        <td><?=$ad->title?></td>
-                        <td class="photoCol"><?=img($this->generateThumbPhoto($ad->photo))?></td>
+                        <td><?=$userCart->userName?></td>
+                        <td><?=$userCart->mobileNumber?></td>
+                        <td><?=$userCart->DeviceName?></td>
+                        <td class="photoCol"><?=img($userCart->devicePhoto)?></td>
+                        <td class="photoCol"><?=img($this->generateThumbPhoto($userCart->brandPhoto))?></td>
                         <td>
-                            <a href="<?=site_url('AdvertisementManagement/edit/'.$ad->id)?>"><i class="icon-pencil"></i></a>
-
-                            <a href="<?=site_url('AdvertisementManagement/delete/'.$ad->id)?>" role="button"><i class="icon-remove"></i></a>
+                            <a href="#" class="btnIsSeen" data-user-cart-id="<?=$userCart->id?>"><i class="icon-pencil">seen</i></a>
                         </td>
                     </tr>
                     <?

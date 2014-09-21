@@ -8,7 +8,7 @@
         <li><a href="<?=site_url('HomeManagement/index')?>">Home</a></li>
         <li ><a href="<?=site_url('BrandManagement/index')?>">Brands</a></li>
         <li class="active"><a href="<?=site_url('AdvertisementManagement/index')?>">Advertisement</a></li>
-        <li ><a href="media.html">Media</a></li>
+        <li ><a href="<?=site_url('NewsManagement/index')?>">News</a></li>
         <li ><a href="calendar.html">Calendar</a></li>
 
     </ul>

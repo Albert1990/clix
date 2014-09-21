@@ -18,6 +18,8 @@
                 </thead>
                 <tbody>
                 <?
+                if($brands)
+                {
                 $counter=1;
                 foreach( $brands as $brand)
                 {
@@ -27,13 +29,14 @@
                         <td class="photoCol"><?=img($this->generateThumbPhoto($brand->photo))?></td>
                         <td><?=$brand->name?></td>
                         <td>
-                            <a href="user.html"><i class="icon-pencil"></i></a>
+                            <a href="<?=site_url('BrandManagement/edit/'.$brand->id)?>"><i class="icon-pencil"></i></a>
 
-                            <a href="<?=site_url('BrandManagement/delete/'.$brand->id)?>" role="button"><i class="icon-remove"></i></a>
+                            <a href="<?=site_url('BrandManagement/delete/'.$brand->id)?>" role="button" class="btnDelete"><i class="icon-remove"></i></a>
                         </td>
                     </tr>
                     <?
                     $counter++;
+                }
                 }
                 ?>
                 </tbody>
@@ -50,10 +53,10 @@
             </ul>
         </div>
 
-<!--        <div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+<!--        <div class="modal small hide fade" id="deleteConfirmationDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
 <!--            <div class="modal-header">-->
 <!--                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>-->
-<!--                <h3 id="myModalLabel">Delete Confirmation</h3>-->
+<!--                <h3 id="btnDelete">Delete Confirmation</h3>-->
 <!--            </div>-->
 <!--            <div class="modal-body">-->
 <!--                <p class="error-text"><i class="icon-warning-sign modal-icon"></i>Are you sure you want to delete the user?</p>-->

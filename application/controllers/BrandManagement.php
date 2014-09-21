@@ -34,7 +34,7 @@ class BrandManagement extends MY_Controller
         if(!empty($_FILES['userfile']['name']))
         {
             $picturePath=$this->do_upload($this->imagesDestPath);
-            $this->resize($picturePath,150,125);
+            $this->resize($picturePath,150,125,true);
         }
         $brand=array('name'=>$name,'photo'=>$picturePath);
         if($this->BrandModel->insert($brand))
@@ -56,14 +56,33 @@ class BrandManagement extends MY_Controller
     {
         $brandID=$this->uri->segment(3);
         $data['brand']=$this->BrandModel->get($brandID);
-        $this->load->view($this->viewDirectoryName.'/edit',$data);
+        $this->load->template($this->viewDirectoryName.'/edit',$data);
     }
     function update()
     {
         $id=$this->input->post('id');
         $name=$this->input->post('name');
 
-        $updatedBrand=array('id'=>$id,'name'=>$name,'photo'=>'');
+        $oldPicPath=$this->input->post('oldPicPath',true);
+
+        $picturePath='';
+
+        if (empty($_FILES['userfile']['name']))
+        {
+            //echo 'no photo';
+            $picturePath=$oldPicPath;
+        }
+        else
+        {
+            //echo 'has photo';
+            if(file_exists($oldPicPath))
+                unlink($oldPicPath);
+            $picturePath=$this->do_upload($this->imagesDestPath);
+            $this->resize($picturePath,150,125,true);
+        }
+
+        $updatedBrand=array('id'=>$id,'name'=>$name,'photo'=>$picturePath);
         $this->BrandModel->update($updatedBrand);
+        redirect($this->viewDirectoryName.'/index');
     }
 }

@@ -49,12 +49,12 @@ class MY_Controller  extends CI_Controller
         }
     }
 	
-    public function resize($imgSourcePath,$width,$height)
+    public function resize($imgSourcePath,$width,$height,$createThumb)
     {
         //$picturePath=$this->do_upload($imgSourcePath);//$this->input->post('picturePath');
         $config['image_library'] = 'gd2';
         $config['source_image'] = $imgSourcePath;
-        $config['create_thumb'] = true;
+        $config['create_thumb'] = $createThumb;
         $config['maintain_ratio'] = TRUE;
         $config['width'] = $width;
         $config['height'] = $height;
