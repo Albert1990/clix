@@ -2,7 +2,7 @@
     <div class="row-fluid">
 
         <div class="btn-toolbar">
-            <a href="<?=site_url('AdvertisementManagement/create')?>" class="btn btn-primary"><i class="icon-plus"></i>New Advertisement</a>
+            <a href="<?=site_url('SliderManagement/create')?>" class="btn btn-primary"><i class="icon-plus"></i>New Slide</a>
             <div class="btn-group">
             </div>
         </div>
@@ -19,21 +19,21 @@
                 </thead>
                 <tbody>
                 <?
-                if($ads)
+                if($slides)
                 {
                 $counter=1;
-                foreach( $ads as $ad)
+                foreach( $slides as $slide)
                 {
                     ?>
                     <tr>
                         <td><?=$counter?></td>
-                        <td><?=$ad->languageName?></td>
-                        <td><?=$ad->title?></td>
-                        <td class="photoCol"><?=img($this->generateThumbPhoto($ad->photo))?></td>
+                        <td><?=$slide->languageName?></td>
+                        <td><?=$slide->title?></td>
+                        <td class="photoCol"><?=img($this->generateThumbPhoto($slide->photo))?></td>
                         <td>
-                            <a href="<?=site_url('AdvertisementManagement/edit/'.$ad->id)?>"><i class="icon-pencil"></i></a>
+                            <a href="<?=site_url('SliderManagement/edit/'.$slide->id)?>"><i class="icon-pencil"></i></a>
 
-                            <a href="<?=site_url('AdvertisementManagement/delete/'.$ad->id)?>" role="button"><i class="icon-remove"></i></a>
+                            <a href="<?=site_url('SliderManagement/delete/'.$slide->id)?>" role="button"><i class="icon-remove"></i></a>
                         </td>
                     </tr>
                     <?
