@@ -50,8 +50,9 @@ class deviceModel extends CI_Model{
 		$q = $this->db->get($table)
 
 		if($q->num_rows() > 0){
-			
+			return $q->result() 
 		}
+		return false;
 	}
 }
 ?>
