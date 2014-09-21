@@ -17,7 +17,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <?
+                <?php
                 if($brands)
                 {
                 $counter=1;
@@ -34,7 +34,7 @@
                             <a href="<?=site_url('BrandManagement/delete/'.$brand->id)?>" role="button" class="btnDelete"><i class="icon-remove"></i></a>
                         </td>
                     </tr>
-                    <?
+                    <?php
                     $counter++;
                 }
                 }
