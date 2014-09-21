@@ -13,6 +13,15 @@
 
     </ul>
 
+    <a href="#device-menu" class="nav-header" data-toggle="collapse"><i class="icon-mobile"></i>Devices</a>
+    <ul id="device-menu" class="nav nav-list collapse">
+        <li class="active"><a href="<?=site_url('deviceManagement/index')?>">devices</a></li>
+        <li><a href="<?=site_url('deviceAttributeManagement/index')?>">devices attributes</a></li>
+        <li ><a href="<?=site_url('BrandManagement/index')?>">Brands</a></li>
+        <li ><a href="calendar.html">Calendar</a></li>
+
+    </ul>
+
     <a href="#accounts-menu" class="nav-header" data-toggle="collapse"><i class="icon-briefcase"></i>Account<span class="label label-info">+3</span></a>
     <ul id="accounts-menu" class="nav nav-list collapse">
         <li ><a href="sign-in.html">Sign In</a></li>
