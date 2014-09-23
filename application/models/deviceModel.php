@@ -8,8 +8,8 @@ class deviceModel extends CI_Model{
 		return false;
 	}
 
-	function update($table = 'device',$post_id,$new_values){
-		$this->db->where('id', $post_id);
+	function update($table = 'device',$id,$new_values){
+		$this->db->where('id', $id);
 		$this->db->update($table, $new_values);
 
 		if($this->db->affected_rows() == 1)
@@ -17,7 +17,7 @@ class deviceModel extends CI_Model{
 		return false; 
 	}
 
-	function delete($table = 'device',$post_id){
+	function delete($table = 'device',$id){
 		$this->db->where('id', $id);
 		$this->db->delete($table); 
 
@@ -25,6 +25,7 @@ class deviceModel extends CI_Model{
 			return true;
 		return false; 
 	}
+	
 
 	function get($table = 'device',$where,$join_tables = array()){
 		
@@ -34,23 +35,41 @@ class deviceModel extends CI_Model{
 
 		$q = $this->db->get_where($table,$where);
 
-		if($q->num_rows() == 1){
-			$row = $q->result()
+		if($q->num_rows() > 0){
+			$row = $q->result();
 			return $row[0];
 		}
-		return flase;
+
+		return false;
 	}
 
-	function getAll($table = 'device',$join_tables = array()){
+	/**
+     * get items from specific table and mabye join others table to 
+     *
+     * under testing 
+     * 
+     * @since          0.2  
+     * @param  string  main table  
+     * @param  array   array of arrays with array('table_name'=>$table_name,$col1=>first column joining on ,$col_2=> second table joing to)  
+     * @return bool    true or false
+     * @author Mohammed Manssour <manssour.mohammed@gmail.com>
+     */
+
+	function getAll($table = 'device',$join_tables = array(),$select = null){
 		
+		if(!is_null($select)){
+			$this->db->select($select);
+		}
 		if(is_array($join_tables) && !empty($join_tables)){
-			//tables you want to join here;
+			foreach ($join_tables as $join_table) {
+				$this->db->join($join_table['table_name'],$join_table['col_1'].'='.$join_table['col_2']);
+			}
 		}
 
-		$q = $this->db->get($table)
+		$q = $this->db->get($table);
 
 		if($q->num_rows() > 0){
-			return $q->result() 
+			return $q->result(); 
 		}
 		return false;
 	}
