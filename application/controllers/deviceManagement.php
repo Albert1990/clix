@@ -24,8 +24,33 @@ class deviceManagement extends MY_Controller{
 	}
 	
 
+	/**
+     * index page of this department site
+     *
+     * under testing 
+     *
+     * @author Mohammed Manssour <manssour.mohammed@gmail.com>
+     */
 	function index(){
-		echo "this is deviceManagementModel";	
+		
+		$table_to_join = array(
+				array(
+						'table_name' => 'device-type',
+						'col_1'		 => 'device.deviceTypeID',
+						'col_2'		 => 'device-type.id',
+					),
+				array(
+						'table_name' => 'brand',
+						'col_1'		 => 'device.brandID',
+						'col_2'		 => 'brand.id',
+					),
+			);
+		$data['devices'] = $this->deviceModel->getAll('device',$table_to_join);
+		$this->load->template($this->viewDirectoryName.'/index.php',$data); 
+	}
+
+	function create(){
+		$this->load->template($this->viewDirectoryName."/create.php");
 	}
 	
 }
