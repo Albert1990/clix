@@ -2,7 +2,7 @@
     <div class="row-fluid">
 
         <div class="btn-toolbar">
-            <a href="<?=site_url('BrandManagement/create')?>" class="btn btn-primary"><i class="icon-plus"></i>New Brand</a>
+            <a href="<?=site_url('deviceManagement/create')?>" class="btn btn-primary"><i class="icon-plus"></i>New Device</a>
             <div class="btn-group">
             </div>
         </div>
@@ -11,32 +11,41 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Brand Photo</th>
-                    <th>Brand Name</th>
+                    <th>Device Photo</th>
+                    <th>Device Name</th>
+                    <th>Device Type</th>
+                    <th>Device Brand</th>
+                    <th>date</th>
                     <th style="width: 26px;"></th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php
-                if($brands)
-                {
-                $counter=1;
-                foreach( $brands as $brand)
-                {
-                    ?>
-                    <tr>
-                        <td><?=$counter?></td>
-                        <td class="photoCol"><?=img($this->generateThumbPhoto($brand->photo))?></td>
-                        <td><?=$brand->name?></td>
-                        <td>
-                            <a href="<?=site_url('BrandManagement/edit/'.$brand->id)?>"><i class="icon-pencil"></i></a>
+                if($devices){
+                    $counter=1;
+                    foreach( $devices as $device){
+                        var_dump($device);
+                        break;
+                ?>
+                        <tr>
+                            <td><?=$counter?></td>
+                            <td class="photoCol"><?=img($this->generateThumbPhoto($device->photo))?></td>
+                            <td><?=$device->name?></td>
+                            <td>
+                                <a href="<?=site_url('deviceManagement/edit/'.$device->id)?>"><i class="icon-pencil"></i></a>
 
-                            <a href="<?=site_url('BrandManagement/delete/'.$brand->id)?>" role="button" class="btnDelete"><i class="icon-remove"></i></a>
-                        </td>
+                                <a href="<?=site_url('deviceManagement/delete/'.$device->id)?>" role="button" class="btnDelete"><i class="icon-remove"></i></a>
+                            </td>
+                        </tr>
+                        <?php
+                        $counter++;
+                    }
+                }else{
+                ?>
+                    <tr>
+                        <td>no devices has been added yet <a href="<?=site_url('deviceManagement/create')?>">add new</a></td>
                     </tr>
-                    <?php
-                    $counter++;
-                }
+                <?php
                 }
                 ?>
                 </tbody>
