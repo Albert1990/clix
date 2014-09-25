@@ -55,8 +55,12 @@ class deviceModel extends CI_Model{
      * @author Mohammed Manssour <manssour.mohammed@gmail.com>
      */
 
-	function getAll($table = 'device',$join_tables = array(),$select = null){
+	function getAll($table = 'device',$join_tables = array(),$select = null,$where = null){
 		
+		if(!is_null($where)){
+			$this->db->where($where);
+		}
+
 		if(!is_null($select)){
 			$this->db->select($select);
 		}
@@ -72,6 +76,23 @@ class deviceModel extends CI_Model{
 			return $q->result(); 
 		}
 		return false;
+	}
+
+	function get_last($table='device'){
+
+		$q = $this->db->get($table,1,0);
+
+		if($q->num_rows() == 1){
+			$row = $q->result();
+			return $row[0];
+		}
+	}
+
+	function excute_query($query){
+		$q = $this->db->query($query);
+		if($q->num_rows() > 0){
+			return $q->result();
+		}
 	}
 }
 ?>
