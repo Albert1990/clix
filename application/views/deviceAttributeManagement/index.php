@@ -28,7 +28,7 @@
                             <td><?=$counter?></td>
                             <td><?=$attr->enName?></td>
                             <td><?=$attr->arName?></td>
-                            <td><?=$attr->type?></td>
+                            <td><?=DeviceAttributeManagement::_generate_type($attr->attributeType)?></td>
                             <td><?=$attr->name?></td>
                             <td>
                                 <a href="<?=site_url('DeviceAttributeManagement/edit/'.$attr->id)?>"><i class="icon-pencil"></i></a>

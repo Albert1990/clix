@@ -27,7 +27,7 @@
 
                         <?php if(isset($types) && is_array($types)): ?>
                             <label>attribute type</label>
-                            <?php echo form_dropdown('attributeTypeID',$types, $attribute->attributeTypeID) ?>
+                            <?php echo form_dropdown('attributeTypeID',$types, $attribute->attributeType) ?>
                         <?php endif; ?>
 
                         <input type="hidden" name="id" value=<?php echo $attribute->id ?> />
