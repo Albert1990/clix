@@ -18,7 +18,11 @@ class deviceModel extends CI_Model{
 	}
 
 	function delete($table = 'device',$id){
-		$this->db->where('id', $id);
+		if(is_array($id)){
+			$this->db->where($id);
+		}else{
+			$this->db->where('id', $id);
+		}
 		$this->db->delete($table); 
 
 		if($this->db->affected_rows() == 1)
@@ -80,7 +84,7 @@ class deviceModel extends CI_Model{
 
 	function get_last($table='device'){
 
-		$q = $this->db->get($table,1,0);
+		$q = $this->db->query("SELECT * FROM $table ORDER BY id DESC LIMIT 1");
 
 		if($q->num_rows() == 1){
 			$row = $q->result();
