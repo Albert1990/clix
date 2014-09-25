@@ -15,10 +15,12 @@ class LanguageModel extends CI_Model
         '".$ad['title']."','".$ad['text']."','".$ad['photo']."','".$ad['date']."');");
         return $res;
     }
+
     function delete($adID)
     {
         $this->db->query("DELETE FROM advertisement WHERE id=".$adID.";");
     }
+
     function get($adID)
     {
         $q=$this->db->query("SELECT * FROM advertisement WHERE id=".$adID.";");
@@ -37,7 +39,7 @@ class LanguageModel extends CI_Model
     function getAll()
     {
         $q=$this->db->query("SELECT * FROM language");
-        if($q->num_rows>0)
+        if($q->num_rows() > 0)
             return $q->result();
         return false;
     }

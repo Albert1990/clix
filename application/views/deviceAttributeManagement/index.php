@@ -2,7 +2,7 @@
     <div class="row-fluid">
 
         <div class="btn-toolbar">
-            <a href="<?=site_url('BrandManagement/create')?>" class="btn btn-primary"><i class="icon-plus"></i>New Brand</a>
+            <a href="<?=site_url('DeviceAttributeManagement/create')?>" class="btn btn-primary"><i class="icon-plus"></i>New assignment</a>
             <div class="btn-group">
             </div>
         </div>
@@ -11,32 +11,40 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Brand Photo</th>
-                    <th>Brand Name</th>
+                    <th>attribute english Name</th>
+                    <th>attribute arabic Name</th>
+                    <th>attribute Type</th>
+                    <th>attribute unit</th>
                     <th style="width: 26px;"></th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php
-                if($brands)
-                {
-                $counter=1;
-                foreach( $brands as $brand)
-                {
-                    ?>
-                    <tr>
-                        <td><?=$counter?></td>
-                        <td class="photoCol"><?=img($this->generateThumbPhoto($brand->photo))?></td>
-                        <td><?=$brand->name?></td>
-                        <td>
-                            <a href="<?=site_url('BrandManagement/edit/'.$brand->id)?>"><i class="icon-pencil"></i></a>
+                if($attrs){
+                    $counter=1;
+                    foreach( $attrs as $attr){
+                ?>
+                        <tr>
+                            <td><?=$counter?></td>
+                            <td><?=$attr->enName?></td>
+                            <td><?=$attr->arName?></td>
+                            <td><?=DeviceAttributeManagement::_generate_type($attr->attributeType)?></td>
+                            <td><?=$attr->name?></td>
+                            <td>
+                                <a href="<?=site_url('DeviceAttributeManagement/edit/'.$attr->id)?>"><i class="icon-pencil"></i></a>
 
-                            <a href="<?=site_url('BrandManagement/delete/'.$brand->id)?>" role="button" class="btnDelete"><i class="icon-remove"></i></a>
-                        </td>
+                                <a href="<?=site_url('DeviceAttributeManagement/delete/'.$attr->id)?>" role="button" class="btnDelete"><i class="icon-remove"></i></a>
+                            </td>
+                        </tr>
+                        <?php
+                        $counter++;
+                    }
+                }else{
+                ?>
+                    <tr>
+                        <td>no attributes has been added yet <a href="<?=site_url('DeviceAttributeManagement/create')?>">add new</a></td>
                     </tr>
-                    <?php
-                    $counter++;
-                }
+                <?php
                 }
                 ?>
                 </tbody>
