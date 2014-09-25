@@ -7,6 +7,12 @@
             </div>
         </div>
         <div class="well">
+            <?php
+            if(isset($message) && is_array($message)){ ?>
+                <div class="alert <?=$message['css_class']?>">
+                    <?=$message['msg']?>
+                </div>
+            <?php } ?>
             <table class="table myDataTable">
                 <thead>
                 <tr>
@@ -24,13 +30,14 @@
                 if($devices){
                     $counter=1;
                     foreach( $devices as $device){
-                        var_dump($device);
-                        break;
                 ?>
                         <tr>
                             <td><?=$counter?></td>
                             <td class="photoCol"><?=img($this->generateThumbPhoto($device->photo))?></td>
                             <td><?=$device->name?></td>
+                            <td><?=$device->typeName?></td>
+                            <td><?=$device->brandName?></td>
+                            <td><?=$device->date?></td>
                             <td>
                                 <a href="<?=site_url('deviceManagement/edit/'.$device->id)?>"><i class="icon-pencil"></i></a>
 
