@@ -18,12 +18,6 @@
 class MY_Controller  extends CI_Controller
 {
     protected  $imagesDestPath='./images/';
-    protected  $types=array(
-            '1'     => 'int',
-            '2'     => 'float',
-            '3'     => 'string',
-            'none'  => 'none'
-        );
 
     public function __construct()
     {

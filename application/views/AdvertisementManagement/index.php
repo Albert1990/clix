@@ -18,33 +18,28 @@
                 </tr>
                 </thead>
                 <tbody>
-                <?php
+                <?
                 if($ads)
                 {
                 $counter=1;
-					foreach( $ads as $ad)
-					{
-						?>
-						<tr>
-							<td><?=$counter?></td>
-							<td><?=$ad->languageName?></td>
-							<td><?=$ad->title?></td>
-							<td class="photoCol"><?=img($this->generateThumbPhoto($ad->photo))?></td>
-							<td>
-								<a href="<?=site_url('AdvertisementManagement/edit/'.$ad->id)?>"><i class="icon-pencil"></i></a>
+                foreach( $ads as $ad)
+                {
+                    ?>
+                    <tr>
+                        <td><?=$counter?></td>
+                        <td><?=$ad->languageName?></td>
+                        <td><?=$ad->title?></td>
+                        <td class="photoCol"><?=img($this->generateThumbPhoto($ad->photo))?></td>
+                        <td>
+                            <a href="<?=site_url('AdvertisementManagement/edit/'.$ad->id)?>"><i class="icon-pencil"></i></a>
 
-								<a href="<?=site_url('AdvertisementManagement/delete/'.$ad->id)?>" role="button"><i class="icon-remove"></i></a>
-							</td>
-						</tr>
-						<?php
-						$counter++;
-					}
-                }else{?>
-					<tr>
-						<td>No advertisements yet, you can <a href="<?=site_url('AdvertisementManagement/create')?>">add new</a></td>
-					</tr>
-				<?php
-				}
+                            <a href="<?=site_url('AdvertisementManagement/delete/'.$ad->id)?>" role="button"><i class="icon-remove"></i></a>
+                        </td>
+                    </tr>
+                    <?
+                    $counter++;
+                }
+                }
                 ?>
                 </tbody>
             </table>

@@ -23,20 +23,11 @@ class NewsManagement extends MY_Controller
     {
         $data['news']=$this->NewsModel->getAll();
         $data['languages']=$this->LanguageModel->getAll();
-
         $this->load->template($this->viewDirectoryName.'/index',$data);
     }
-
     function create()
     {
         $data['languages']=$this->LanguageModel->getAll();
-       
-        if($data['languages'] === false){
-            $data['languages'][1] = new stdClass();
-            $data['languages'][1]->id = 1;
-            $data['languages'][1]->name = 'english';
-        }
-
         $this->load->template($this->viewDirectoryName."/create",$data);
     }
 
@@ -54,13 +45,10 @@ class NewsManagement extends MY_Controller
             $picturePath=$this->do_upload($this->imagesDestPath);
             $this->resize($picturePath,150,125,true);
         }
-
         $news=array('languageID'=>$languageID,'title'=>$title,'text'=>$text,'photo'=>$picturePath);
-
         if($this->NewsModel->insert($news))
             redirect($this->viewDirectoryName.'/index');
     }
-
     function delete()
     {
         $newsID=$this->uri->segment(3);

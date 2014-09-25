@@ -18,7 +18,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <?php
+                <?
                 if($news)
                 {
                 $counter=1;
@@ -36,7 +36,7 @@
                             <a href="<?=site_url('NewsManagement/delete/'.$ad->id)?>" role="button"><i class="icon-remove"></i></a>
                         </td>
                     </tr>
-                    <?php
+                    <?
                     $counter++;
                 }
                 }

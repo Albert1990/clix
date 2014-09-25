@@ -1,4 +1,4 @@
-<?php
+<?
 $this->load->view('templates/navbar');
 $this->load->view('templates/sidebar');
 ?>
@@ -13,7 +13,7 @@ $this->load->view('templates/sidebar');
         <li><a href="index.html">Home</a> <span class="divider">/</span></li>
         <li class="active">Users</li>
     </ul>
-<?php
+<?
 $this->load->view($viewName) ;
 $this->view('templates/footer');
 ?>

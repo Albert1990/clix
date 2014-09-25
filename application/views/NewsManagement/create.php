@@ -14,14 +14,14 @@
                 <div class="tab-pane active in" id="home">
                     <label>Language</label>
                     <select name="languageID">
-                        <?php
+                        <?
                         if($languages)
                         {
                             foreach($languages as $lang)
                             {
                                 ?>
                                 <option value="<?=$lang->id?>"><?=$lang->name?></option>
-                            <?php
+                            <?
                             }
                         }
                         ?>
