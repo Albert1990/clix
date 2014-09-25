@@ -6,11 +6,34 @@
  * To change this template use File | Settings | File Templates.
  */
 var deleteLink;
+var usersNames;
 
 $(document).ready(function(){
 
+    $.ajax({
+        cache:false,
+        dataType:'json',
+        url:'<?=site_url("UserManagement/getAllUsersNames")?>',
+        success:function(data){
+            for(var i=0;i<data.length;i++)
+            {
+                usersNames[i]=data[i]['userName'];
+            }
+        },
+        error:function(){
+            console.log('error');
+        }
+    });
+
     //console.log('hello samer');
     //$('.btnDelete').click(btnDeleteIsClicked);
+    $('#txtUserName').autocomplete({
+        source:usersNames,
+        close:function(){
+            console.log('closed');
+        }
+    });
+
 });
 
 btnDeleteIsClicked=function(e){

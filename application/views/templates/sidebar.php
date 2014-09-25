@@ -2,15 +2,17 @@
     <form class="search form-inline">
         <input type="text" placeholder="Search...">
     </form>
-
+    <?php
+    $controllerName=$this->uri->segment(1);
+    ?>
     <a href="#dashboard-menu" class="nav-header" data-toggle="collapse"><i class="icon-dashboard"></i>Dashboard</a>
     <ul id="dashboard-menu" class="nav nav-list collapse in">
-        <li><a href="<?=site_url('HomeManagement/index')?>">Home</a></li>
-        <li ><a href="<?=site_url('BrandManagement/index')?>">Brands</a></li>
-        <li class="active"><a href="<?=site_url('AdvertisementManagement/index')?>">Advertisement</a></li>
-        <li ><a href="<?=site_url('NewsManagement/index')?>">News</a></li>
-        <li ><a href="calendar.html">Calendar</a></li>
-
+        <li <?=$controllerName=="HomeManagement" ? "class='active'":""?>><a href="<?=site_url('HomeManagement/index')?>">Home</a></li>
+        <li <?=$controllerName=="BrandManagement" ? "class='active'":""?> ><a href="<?=site_url('BrandManagement/index')?>">Brands</a></li>
+        <li <?=$controllerName=="AdvertisementManagement" ? "class='active'":""?>><a href="<?=site_url('AdvertisementManagement/index')?>">Advertisement</a></li>
+        <li <?=$controllerName=="NewsManagement" ? "class='active'":""?>><a href="<?=site_url('NewsManagement/index')?>">News</a></li>
+        <li <?=$controllerName=="SliderManagement" ? "class='active'":""?>><a href="<?=site_url("SliderManagement/index")?>">Slider</a></li>
+        <li <?=$controllerName=="UserCartManagement" ? "class='active'":""?>><a href="<?=site_url("UserCartManagement/index")?>">User Cart</a></li>
     </ul>
 
     <a href="#accounts-menu" class="nav-header" data-toggle="collapse"><i class="icon-briefcase"></i>Account<span class="label label-info">+3</span></a>

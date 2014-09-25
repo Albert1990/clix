@@ -3,6 +3,7 @@
 
         <div class="btn-toolbar">
             <a href="<?=site_url('NewsManagement/create')?>" class="btn btn-primary"><i class="icon-plus"></i>New News</a>
+            <input type="text" class="txtFilter" placeholder="user name">
             <div class="btn-group">
             </div>
         </div>

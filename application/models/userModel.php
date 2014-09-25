@@ -12,7 +12,15 @@
  * @author  Mohammed Manssour <manssour.mohammed@gmail.com>
  * @link    http://www.jawsaqLabs.com
  */
-class userModel extends CI_Model{
+class UserModel extends CI_Model{
+
+    function getUsersNames()
+    {
+        $q=$this->db->query("SELECT id,userName FROM user");
+        if($q->num_rows>0)
+            return $q->result();
+        return false;
+    }
 	
 	/**
      * getting all info of the current user

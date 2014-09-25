@@ -21,6 +21,6 @@ class UserCartManagement extends MY_Controller
     public function index()
     {
         $data['userCarts']=$this->UserCartModel->getUnseen();
-        $this->load->templete($this->viewDirectoryName.'/index');
+        $this->load->template($this->viewDirectoryName.'/index');
     }
 }
