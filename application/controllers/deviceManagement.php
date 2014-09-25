@@ -207,7 +207,7 @@ class deviceManagement extends MY_Controller{
 
 			/*getting labels*/
 			
-			$data['attributes'] = $this->deviceModel->excute_query("SELECT `device-property`.`id` as property_id,`device-attribute`.`id`, `device-attribute`.`enName`, `device-attribute`.`arName`, `device-attribute-unit`.`name`, `device-attribute`.`attributeType`,`device-property`.`value` FROM (`device-attribute-type`) JOIN `device-attribute` ON `deviceAttributeID`=`device-attribute`.`id` JOIN `device-attribute-unit` ON `deviceAttributeUnitID`=`device-attribute-unit`.`id` JOIN `device-property` ON `device-attribute`.`id`=`device-property`.`deviceAttributeID` WHERE `deviceTypeID` = ".$data['device']->deviceTypeID);
+			$data['attributes'] = $this->deviceModel->excute_query("SELECT `device-property`.`id` as property_id,`device-attribute`.`id`, `device-attribute`.`enName`, `device-attribute`.`arName`, `device-attribute-unit`.`name`, `device-attribute`.`attributeType`,`device-property`.`value` FROM (`device-attribute-type`) JOIN `device-attribute` ON `deviceAttributeID`=`device-attribute`.`id` JOIN `device-attribute-unit` ON `deviceAttributeUnitID`=`device-attribute-unit`.`id` JOIN `device-property` ON `device-attribute`.`id`=`device-property`.`deviceAttributeID` WHERE `deviceTypeID` = ".$data['device']->deviceTypeID ." AND `device-property`.`deviceID`=".$data['device']->id);
 
 			$this->load->template($this->viewDirectoryName.'/edit',$data);
 
@@ -304,6 +304,8 @@ class deviceManagement extends MY_Controller{
 
 		if($this->deviceModel->get('device',array('id'=>$deviceID))){
 			$q = $this->deviceModel->delete('device',$deviceID);
+
+			$f = $this->deviceModel->delete('device-property',array('deviceID'=>$deviceID));
 			if($q){
 				$action_message = array(
 					'css_class'	=> 'alert alert-success',
