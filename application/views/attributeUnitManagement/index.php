@@ -2,43 +2,49 @@
     <div class="row-fluid">
 
         <div class="btn-toolbar">
-            <a href="<?=site_url('BrandManagement/create')?>" class="btn btn-primary"><i class="icon-plus"></i>New Brand</a>
+            <a href="<?=site_url('attributeUnitManagement/create')?>" class="btn btn-primary"><i class="icon-plus"></i>New attribute type</a>
             <div class="btn-group">
             </div>
         </div>
         <div class="well">
+            <?php
+            if(isset($message) && is_array($message)){ ?>
+                <div class="alert <?=$message['css_class']?>">
+                    <?=$message['msg']?>
+                </div>
+            <?php } ?>
             <table class="table myDataTable">
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Brand Photo</th>
-                    <th>Brand Name</th>
+                    <th>attribute unit</th>
                     <th style="width: 26px;"></th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php
-                if($brands)
-                {
-                $counter=1;
-                foreach( $brands as $brand)
-                {
-                    ?>
-                    <tr>
-                        <td><?=$counter?></td>
-                        <td class="photoCol"><?=img($this->generateThumbPhoto($brand->photo))?></td>
-                        <td><?=$brand->name?></td>
-                        <td>
-                            <a href="<?=site_url('BrandManagement/edit/'.$brand->id)?>"><i class="icon-pencil"></i></a>
+                if($units){
+                    $counter=1;
+                    foreach( $units as $unit)
+                    {
+                        ?>
+                        <tr>
+                            <td><?=$counter?></td>
+                            <td><?=$unit->name?></td>
+                            <td>
+                                <a href="<?=site_url('attributeUnitManagement/edit/'.$unit->id)?>"><i class="icon-pencil"></i></a>
 
-                            <a href="<?=site_url('BrandManagement/delete/'.$brand->id)?>" role="button" class="btnDelete"><i class="icon-remove"></i></a>
-                        </td>
-                    </tr>
-                    <?php
-                    $counter++;
-                }
-                }
-                ?>
+                                <a href="<?=site_url('attributeUnitManagement/delete/'.$unit->id)?>" role="button" class="btnDelete"><i class="icon-remove"></i></a>
+                            </td>
+                        </tr>
+                        <?php
+                        $counter++;
+                    }
+                }else{ ?>
+                         <tr>
+                            <td>no devices has been added yet <a href="<?=site_url('attributeUnitManagement/create')?>">add new</a></td>
+                        </tr>
+                <?php } ?>
                 </tbody>
             </table>
         </div>

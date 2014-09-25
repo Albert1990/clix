@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
- * application/controllers/DeviceAttributeManagement.php main controller for managing device atributes
+ * application/controllers/DeviceAttributeTypeManagement.php main controller for managing device atributes
  * Copyright (C) 2008-2012 Brain Socker <berainsocket.com>
  *
  * LICENSE: this program isn't open source
@@ -9,14 +9,12 @@
  *
  * @package Clix
  * @version 0.1
- * @author  samer shatta <@example.com>
  * @author  Mohammed Manssour <manssour.mohammed@gmail.com>
  * @link    http://www.jawsaqLabs.com
  */
-class DeviceAttributeManagement extends MY_Controller
+class DeviceAttributeTypeManagement extends MY_Controller
 {
-	private $viewDirectoryName="DeviceAttributeManagement";
-	
+	private $viewDirectoryName="DeviceAttributeTypeManagement";
 
 	function __construct(){
 		parent::__construct();
@@ -39,16 +37,21 @@ class DeviceAttributeManagement extends MY_Controller
 		if(is_array($message) && !empty($message)){
 			$data['message'] = $message;
 		}
+
 		$tables_to_join = array(
 				array(
-						'table_name'=> 'device-attribute-unit',
-						'col_2'		=> 'device-attribute-unit.id',
-						'col_1'		=> 'deviceAttributeUnitID',
+						'table_name'=> 'device-attribute',
+						'col_2'		=> 'device-attribute.id',
+						'col_1'		=> 'deviceAttributeID',
 					),
-				
+				array(
+						'table_name' => 'device-type',
+						'col_2'	=> 'device-type.id',
+						'col_1'	=> 'deviceTypeID',
+					),
 			);
-		$select = 'device-attribute.id,arName,enName,attributeType,device-attribute-unit.name';
-		$data['attrs'] = $this->deviceModel->getAll('device-attribute',$tables_to_join,$select);
+		$select = 'device-attribute-type.id,device-type.name,device-attribute.enName,device-attribute.arName';
+		$data['items'] = $this->deviceModel->getAll('device-attribute-type',$tables_to_join,$select);
 		$this->load->template($this->viewDirectoryName.'/index.php',$data);
 	}
 
@@ -63,15 +66,20 @@ class DeviceAttributeManagement extends MY_Controller
      */
 	function create(){
 
-		$units = $this->deviceModel->getAll('device-attribute-unit');
-		if($units){
-			foreach ($units as $unit) {
-				$data['units'][$unit->id] = $unit->name;	
+		$attributes = $this->deviceModel->getAll('device-attribute');
+		if($attributes){
+			foreach ($attributes as $attr) {
+				$data['attributes'][$attr->id] = $attr->enName;	
 			}
 
 		}
 
-		$data['types'] = $this->types;
+		$devices = $this->deviceModel->getAll('device-type');
+		if($devices){
+			foreach ($devices as $device) {
+				$data['devices'][$device->id] = $device->name;
+			}
+		}
 
 		$this->load->template($this->viewDirectoryName.'/create.php',$data);
 	}
@@ -88,38 +96,39 @@ class DeviceAttributeManagement extends MY_Controller
      */
 	function insert(){
 
-		$this->form_validation->set_rules('enName', 'english Name', 'trim|required');
-		$this->form_validation->set_rules('arName', 'arabic Name', 'trim|required');
+		$device = $this->input->post('device');
+		$attributes = $this->input->post('attributes');
+		if($attributes && is_array($attributes) && !empty($attributes)){
+			$attributes = array_unique($attributes);
 
-		if ($this->form_validation->run() === FALSE){
-			/*redirect to create page of the controller*/
-			$this->create();
-		}else{
-			$values = array(
-					'enName' 					=> $this->input->post('enName'),
-					'arName' 					=> $this->input->post('arName'),
-					'deviceAttributeUnitID' 	=> $this->input->post('attributeUnitID'),
-					'attributeType' 			=> $this->input->post('attributeTypeID'),
-				);
-
-			$q = $this->deviceModel->insert_new('device-attribute',$values);
-
-			if($q){
-				/*the message that will be shown to the user when the action is done*/
-				$action_message = array(
-						'css_class' => 'alert-success',
-						'msg' 		=>  'inserting is done successfully',
+			foreach ($attributes as $attr) {
+				$values = array(
+						'deviceTypeID' 		=> $device,
+						'deviceAttributeID'	=> $attr,
 					);
-			}else{
-				$action_message = array(
-						'css_class' => 'alert-danger',
-						'msg' 		=>  'an error occured',
-					);
+				$q = $this->deviceModel->insert_new('device-attribute-type',$values);
+				if(!$q)
+					break;
 			}
+		}
+
+		if($q){
+			/*the message that will be shown to the user when the action is done*/
+			$action_message = array(
+					'css_class' => 'alert-success',
+					'msg' 		=>  'inserting is done successfully',
+				);
+		}else{
+			$action_message = array(
+					'css_class' => 'alert-danger',
+					'msg' 		=>  'an error occured',
+				);
+		}
 			
 
-			$this->index($action_message);
-		}
+		$this->index($action_message);
+		
+		
 	}
 
 
@@ -135,9 +144,9 @@ class DeviceAttributeManagement extends MY_Controller
 	function delete(){
 		$post_id = $this->uri->segment(3);
 
-		if($this->deviceModel->get('device-attribute',array('id'=>$post_id))){
+		if($this->deviceModel->get('device-attribute-type',array('id'=>$post_id))){
 
-			$q = $this->deviceModel->delete('device-attribute',$post_id);
+			$q = $this->deviceModel->delete('device-attribute-type',$post_id);
 
 			if($q){
 				/*the message that will be shown to the user when the action is done*/
@@ -169,18 +178,23 @@ class DeviceAttributeManagement extends MY_Controller
 			$post_id = $this->uri->segment(3);
 		}
 
-		$data['attribute'] = $this->deviceModel->get('device-attribute',array('id'=>$post_id));
+		$data['item'] = $this->deviceModel->get('device-attribute-type',array('id'=>$post_id));
 		
-		if($data['attribute']){
+		if($data['item']){
 
-			$units = $this->deviceModel->getAll('device-attribute-unit');
-			if($units){
-				foreach ($units as $unit) {
-					$data['units'][$unit->id] = $unit->name;	
+			$devices = $this->deviceModel->getAll('device-type');
+			if($devices){
+				foreach ($devices as $device) {
+					$data['devices'][$device->id] = $device->name;	
 				}
 			}
 
-		$data['types'] = $this->types;
+			$attributes = $this->deviceModel->getAll(' device-attribute');
+			if($attributes){
+				foreach ($attributes as $attr) {
+					$data['attributes'][$attr->id] = $attr->enName;
+				}
+			}
 
 			$this->load->template($this->viewDirectoryName.'/edit.php',$data);
 
@@ -199,28 +213,22 @@ class DeviceAttributeManagement extends MY_Controller
 		$post_id = $this->input->post('id');
 		
 		/* checking if the id belong to database */
-		if($this->deviceModel->get('device-attribute',array('id'=>$post_id))){
+		if($this->deviceModel->get('device-attribute-type',array('id'=>$post_id))){
 
-			$this->form_validation->set_rules('enName', 'english Name', 'trim|required');
-			$this->form_validation->set_rules('arName', 'arabic Name', 'trim|required');
 
-			if($this->form_validation->run() == false){
-				$this->edit($post_id);
-			}else{
 				
 				$values = array(
-					'enName' 					=> $this->input->post('enName'),
-					'arName' 					=> $this->input->post('arName'),
-					'deviceAttributeUnitID' 	=> $this->input->post('attributeUnitID'),
-					'attributeType' 			=> $this->input->post('attributeTypeID'),
+					
+					'deviceAttributeID' 	=> $this->input->post('attributes'),
+					'deviceTypeID' 			=> $this->input->post('device'),
 				);
-				$q = $this->deviceModel->update('device-attribute',$post_id,$values);
+				$q = $this->deviceModel->update('device-attribute-type',$post_id,$values);
 
 				if($q){
 					/*the message that will be shown to the user when the action is done*/
 					$action_message = array(
 						'css_class' => 'alert-success',
-						'msg' 		=>  'deleteing is done successfully',
+						'msg' 		=>  'updating is done successfully',
 					);
 					
 				}else{
@@ -230,7 +238,7 @@ class DeviceAttributeManagement extends MY_Controller
 					);
 
 				}
-			}
+			
 		}else{
 			$action_message = array(
 						'css_class' => 'alert-error',
@@ -242,27 +250,6 @@ class DeviceAttributeManagement extends MY_Controller
 		$this->index($action_message);
 		
 
-	}
-
-
-	function _generate_type($type){
-		switch ($type) {
-			case 1:
-				return 'int';
-				break;
-
-			case 2:
-				return 'float';
-				break;
-
-			case 3:
-				return 'string';
-				break;
-			
-			default:
-				return 'none';
-				break;
-		}
 	}
 
 }
