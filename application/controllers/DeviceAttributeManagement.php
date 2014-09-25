@@ -16,6 +16,7 @@
 class DeviceAttributeManagement extends MY_Controller
 {
 	private $viewDirectoryName="DeviceAttributeManagement";
+	
 
 	function __construct(){
 		parent::__construct();
@@ -44,13 +45,9 @@ class DeviceAttributeManagement extends MY_Controller
 						'col_2'		=> 'device-attribute-unit.id',
 						'col_1'		=> 'deviceAttributeUnitID',
 					),
-				array(
-						'table_name' => 'attribute-type',
-						'col_2'	=> 'attribute-type.id',
-						'col_1'	=> 'attributeTypeID',
-					),
+				
 			);
-		$select = 'device-attribute.id,arName,enName,attribute-type.type,device-attribute-unit.name';
+		$select = 'device-attribute.id,arName,enName,attributeType,device-attribute-unit.name';
 		$data['attrs'] = $this->deviceModel->getAll('device-attribute',$tables_to_join,$select);
 		$this->load->template($this->viewDirectoryName.'/index.php',$data);
 	}
@@ -74,12 +71,7 @@ class DeviceAttributeManagement extends MY_Controller
 
 		}
 
-		$types = $this->deviceModel->getAll('attribute-type');
-		if($types){
-			foreach ($types as $type) {
-				$data['types'][$type->id] = $type->type;
-			}
-		}
+		$data['types'] = $this->types;
 
 		$this->load->template($this->viewDirectoryName.'/create.php',$data);
 	}
@@ -107,7 +99,7 @@ class DeviceAttributeManagement extends MY_Controller
 					'enName' 					=> $this->input->post('enName'),
 					'arName' 					=> $this->input->post('arName'),
 					'deviceAttributeUnitID' 	=> $this->input->post('attributeUnitID'),
-					'attributeTypeID' 			=> $this->input->post('attributeTypeID'),
+					'attributeType' 			=> $this->input->post('attributeTypeID'),
 				);
 
 			$q = $this->deviceModel->insert_new('device-attribute',$values);
@@ -188,12 +180,7 @@ class DeviceAttributeManagement extends MY_Controller
 				}
 			}
 
-			$types = $this->deviceModel->getAll('attribute-type');
-			if($types){
-				foreach ($types as $type) {
-					$data['types'][$type->id] = $type->type;
-				}
-			}
+		$data['types'] = $this->types;
 
 			$this->load->template($this->viewDirectoryName.'/edit.php',$data);
 
@@ -225,7 +212,7 @@ class DeviceAttributeManagement extends MY_Controller
 					'enName' 					=> $this->input->post('enName'),
 					'arName' 					=> $this->input->post('arName'),
 					'deviceAttributeUnitID' 	=> $this->input->post('attributeUnitID'),
-					'attributeTypeID' 			=> $this->input->post('attributeTypeID'),
+					'attributeType' 			=> $this->input->post('attributeTypeID'),
 				);
 				$q = $this->deviceModel->update('device-attribute',$post_id,$values);
 
@@ -255,6 +242,27 @@ class DeviceAttributeManagement extends MY_Controller
 		$this->index($action_message);
 		
 
+	}
+
+
+	function _generate_type($type){
+		switch ($type) {
+			case 1:
+				return 'int';
+				break;
+
+			case 2:
+				return 'float';
+				break;
+
+			case 3:
+				return 'string';
+				break;
+			
+			default:
+				return 'none';
+				break;
+		}
 	}
 
 }
