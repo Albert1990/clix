@@ -68,7 +68,7 @@ class deviceManagement extends MY_Controller{
 
 		$this->load->template($this->viewDirectoryName."/create.php",$data);
 	}
-
+	
 	function insert_1(){
 		$this->form_validation->set_rules('deviceName','device Name','trim|required');
 
