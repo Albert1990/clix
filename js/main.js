@@ -41,6 +41,15 @@ $(document).ready(function(){
 
 	});
 
+
+	$('.btnDelete').click(function(e){
+		$ask = confirm('are you sure you want to delete?');
+		if(!$ask){
+			e.preventDefault();
+		}
+
+	});
+
 	
 
     //console.log('hello samer');
