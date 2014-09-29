@@ -181,6 +181,27 @@ class deviceManagement extends MY_Controller{
 		$this->index($action_message);
 	}
 
+	function cancel_inserting(){
+
+		$last_entry = $this->deviceModel->get_last(); 
+
+		$q = $this->deviceModel->delete('device',$last_entry->id);
+
+		if($q){
+			$action_message = array(
+					'css_class'	=> 'alert',
+					'msg'	=> 'you have cancelled inserting',
+				);
+		}else{
+			$action_message = array(
+					'css_class'	=> 'alert alert-danger',
+					'msg'	=> 'an error occured',
+				);
+		}
+
+		$this->index($action_message);
+	}
+
 
 	function edit(){
 
