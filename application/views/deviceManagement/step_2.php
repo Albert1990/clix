@@ -4,7 +4,7 @@
         <?=form_open_multipart('deviceManagement/insert_final')?>
         <div class="btn-toolbar">
             <input type="submit" name="deviceSubmit" value="next" class="btn btn-primary">
-            <?=anchor('deviceManagement/index','Cancel','class="btn" data-toggle="modal"')?>
+            <a href="<?php echo site_url('deviceManagement/cancel_inserting') ?>" class="btn">Cancel</a>
 <!--            <a href="#myModal" data-toggle="modal" class="btn">Cancel</a>-->
             <div class="btn-group">
             </div>
