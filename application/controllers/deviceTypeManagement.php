@@ -146,6 +146,28 @@ class deviceTypeManagement extends MY_Controller
 		
 		if($data['type']){
 
+			/*getting all attributes*/
+			$attrs = $this->deviceModel->getAll('device-attribute');
+			if($attrs){
+				foreach ($attrs as $attr) {
+					$data['attributes'][$attr->id] = $attr->enName;
+				}
+			}
+
+
+
+			/*selecting device Attributes*/
+
+			$table_to_join = array(
+					array(
+							'table_name' => 'device-attribute',
+							'col_1' => 'deviceAttributeID',
+							'col_2'	=> 'device-attribute.id'
+						)
+				);
+			$select = 'device-attribute.id,device-attribute.enName';
+			$data['deviceAttributes'] = $this->deviceModel->getAll('device-attribute-type',$table_to_join,$select,array('deviceTypeID'=>$data['type']->id));
+
 			$this->load->template($this->viewDirectoryName.'/edit.php',$data);
 
 		}else{
@@ -174,21 +196,50 @@ class deviceTypeManagement extends MY_Controller
 				$name = $this->input->post('name');
 				$q = $this->deviceModel->update('device-type',$post_id,	array('name'=>$name));
 
-				if($q){
-					/*the message that will be shown to the user when the action is done*/
-					$action_message = array(
-						'css_class' => 'alert-success',
-						'msg' 		=>  'deleteing is done successfully',
-					);
-					
+				
+
+				$attributes = array_unique($this->input->post('attributes'));
+
+				/*delete all old attrs for the deviceType*/
+				$q_deletion = $this->deviceModel->delete('device-attribute-type',array('deviceTypeID'=>$post_id));
+				/*if deletion has done successfully*/
+				if($q_deletion){
+					$values = array('deviceTypeID'=>$post_id);
+					foreach ($attributes as $attr) {
+						$values['deviceAttributeID'] = $attr;
+						$q_inserting = $this->deviceModel->insert_new('device-attribute-type',$values);
+						if(!$q_inserting){
+							/*the message that will be shown to the user when the action is done*/
+							$action_message = array(
+								'css_class' => 'alert-error',
+								'msg' 		=>  'an error occured1',
+							);
+							break;	
+						}
+					}
+
+					if($q_inserting){
+						$action_message = array(
+								'css_class' => 'alert-success',
+								'msg' 		=>  'updating is done successfully',
+							);
+					}
+							
+
+							
+						
+
 				}else{
 					$action_message = array(
-						'css_class' => 'alert-error',
-						'msg' 		=>  'an error occured',
-					);
+							'css_class' => 'alert-error',
+							'msg' 		=>  'an error occured',
+						);
+				}//else deletion
 
-				}
-			}
+			}//else validation
+
+
+
 		}else{
 			$action_message = array(
 						'css_class' => 'alert-error',
@@ -196,6 +247,7 @@ class deviceTypeManagement extends MY_Controller
 					);
 
 		}
+
 		$this->index($action_message);
 		
 
