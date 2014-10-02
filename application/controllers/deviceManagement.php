@@ -46,7 +46,8 @@ class deviceManagement extends MY_Controller{
 					),
 			);
 		$select = 'device.id,device.name,device.photo,device-type.name as typeName,brand.name as brandName,device.date';
-		$data['devices'] = $this->deviceModel->getAll('device',$table_to_join,$select);
+		$where = 'device-type.id !='.$this->accessoire_field_id;
+		$data['devices'] = $this->deviceModel->getAll('device',$table_to_join,$select,$where);
 		$this->load->template($this->viewDirectoryName.'/index.php',$data); 
 	}
 
@@ -58,8 +59,8 @@ class deviceManagement extends MY_Controller{
 				$data['brands'][$brand->id]=$brand->name; 
 			}
 		}
-		
-		$devices = $this->deviceModel->getAll('device-type');
+		$where = 'id !='.$this->accessoire_field_id;
+		$devices = $this->deviceModel->getAll('device-type',null,null,$where);
 		if($devices){
 			foreach ($devices as $device) {
 				$data['devices'][$device->id] = $device->name;
@@ -217,8 +218,8 @@ class deviceManagement extends MY_Controller{
 					$data['brands'][$brand->id]=$brand->name; 
 				}
 			}
-			
-			$devices = $this->deviceModel->getAll('device-type');
+			$where = 'id !='.$this->accessoire_field_id;
+			$devices = $this->deviceModel->getAll('device-type',null,null,$where);
 			if($devices){
 				foreach ($devices as $device) {
 					$data['devices'][$device->id] = $device->name;
