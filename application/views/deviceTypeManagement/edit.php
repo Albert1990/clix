@@ -27,7 +27,21 @@
                     
                 </div>
                 <div class="tab-pane fade" id="typeAttributes">
-                    this is a tab
+                    <label>atributes</label>
+
+                    <?php
+                    if($deviceAttributes):
+                         foreach ($deviceAttributes as $attr): ?>
+                            <div class="bs-repeatable">
+                                <?php
+                                  echo form_dropdown('attributes[]',$attributes,$attr->id);
+                                ?>
+                                <a href="#" class="bs-addnew btn">add new</a>
+                                <a href="#" class="bs-delete btn">delete</a>
+                            </div><!-- end of bs-repeatable -->
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+
                 </div>
             </div>
 

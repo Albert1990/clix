@@ -24,7 +24,7 @@ class MY_Controller  extends CI_Controller
             '3'     => 'string',
             'none'  => 'none'
         );
-
+    protected  $accessoire_field_id = 8;
     public function __construct()
     {
         parent::__construct();

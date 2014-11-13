@@ -18,10 +18,11 @@
     <a href="#device-menu" class="nav-header" data-toggle="collapse"><i class="icon-mobile"></i>Devices</a>
     <ul id="device-menu" class="nav nav-list collapse">
         <li class="active"><a href="<?=site_url('deviceManagement/index')?>">devices</a></li>
+        <li ><a href="<?=site_url('accessoireManagement/index')?>">accessoires</a></li>
+        <li ><a href="<?=site_url('deviceTypeManagement/index')?>">device Types</a></li>
         <li><a href="<?=site_url('deviceAttributeManagement/index')?>">devices attributes</a></li>
         <li><a href="<?=site_url('DeviceAttributeTypeManagement/index')?>">assign attributes to devices</a></li>
         <li ><a href="<?=site_url('BrandManagement/index')?>">Brands</a></li>
-        <li ><a href="<?=site_url('deviceTypeManagement/index')?>">device Types</a></li>
         <li ><a href="<?=site_url('attributeTypeManagement/index')?>">attribute Types</a></li>
         <li ><a href="<?=site_url('attributeUnitManagement/index')?>">attribute Types unit</a></li>
 

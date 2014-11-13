@@ -25,7 +25,7 @@ class deviceModel extends CI_Model{
 		}
 		$this->db->delete($table); 
 
-		if($this->db->affected_rows() == 1)
+		if($this->db->affected_rows() > 0)
 			return true;
 		return false; 
 	}

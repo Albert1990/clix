@@ -12,9 +12,9 @@
  * @author  Mohammed Manssour <manssour.mohammed@gmail.com>
  * @link    http://www.jawsaqLabs.com
  */
-class deviceManagement extends MY_Controller{
+class accessoireManagement extends MY_Controller{
 
-	private $viewDirectoryName="deviceManagement";
+	private $viewDirectoryName="accessoireManagement";
 	
 	function __construct(){
 		parent::__construct();
@@ -46,17 +46,12 @@ class deviceManagement extends MY_Controller{
 					),
 			);
 		$select = 'device.id,device.name,device.photo,device-type.name as typeName,brand.name as brandName,device.date';
-		$where = 'device-type.id !='.$this->accessoire_field_id;
+		$where = 'device-type.id ='.$this->accessoire_field_id;
 		$data['devices'] = $this->deviceModel->getAll('device',$table_to_join,$select,$where);
 		$this->load->template($this->viewDirectoryName.'/index.php',$data); 
 	}
 
 	function create(){
-
-		/*inof of the devices stored in session*/
-		$data['stored_sess_info'] = $this->session ->all_userdata();
-		
-		
 
 		$brands = $this->deviceModel->getAll('brand');
 		if($brands){
@@ -64,7 +59,7 @@ class deviceManagement extends MY_Controller{
 				$data['brands'][$brand->id]=$brand->name; 
 			}
 		}
-		$where = 'id !='.$this->accessoire_field_id;
+		$where = 'id ='.$this->accessoire_field_id;
 		$devices = $this->deviceModel->getAll('device-type',null,null,$where);
 		if($devices){
 			foreach ($devices as $device) {
@@ -75,7 +70,7 @@ class deviceManagement extends MY_Controller{
 		$this->load->template($this->viewDirectoryName."/create.php",$data);
 	}
 	
-	function insert_step_1(){
+	function insert_1(){
 		$this->form_validation->set_rules('deviceName','device Name','trim|required');
 
 		if($this->form_validation->run() == false){
@@ -83,42 +78,46 @@ class deviceManagement extends MY_Controller{
 			$this->create();
 
 		}else{
-			$stored_sess_info = array(
-					'deviceName' 			=> $this->input->post('deviceName'),
+			$values = array(
+					'name' 			=> $this->input->post('deviceName'),
 					'deviceTypeID'	=> $this->input->post('deviceType'),
 					'brandID'		=> $this->input->post('deviceBrand'),
 					'date'			=> date('Y-m-d'),
-					'devicePhoto'	=> '',
 				);
-				
-			
 
 	        if(!empty($_FILES['userfile']['name'])){
-	           $stored_sess_info['devicePhoto'] = $this->do_upload($this->imagesDestPath);
-	            $this->resize($stored_sess_info['devicePhoto'],150,125,true);
+	            $values['photo']=$this->do_upload($this->imagesDestPath);
+	            $this->resize($values['photo'],150,125,true);
 	        }
-	        
 
-	       	$this->session->set_userdata($stored_sess_info);
-	        
+	        $q = $this->deviceModel->insert_new('device',$values);
+	        if($q){
+	        	$action_message = array(
+	        			'css_class' => 'alert alert-success',
+	        			'msg'		=> 'step1 has done successfully',
+	        		);
 
-	        /**
-	        * move to phase two
-	        * pahse two must have the id of the device and it's type to get the correct attributes
-	        */
-	       $action_message = array(
-					'css_class' 	=> 'alert alert-success',
-					'msg'			=> 'step 1 has done seccessfully now you must enter device specification',
-				);
+	        	/*get last entry the one the we have just entered*/
+	        	$last_entry = $this->deviceModel->get_last();
 
-	        $this->step_2($action_message);
-	        
-	        
+	        	/**
+	        	* move to phase two
+	        	* pahse two must have the id of the device and it's type to get the correct attributes
+	        	*/
+
+	        	$this->step_2($action_message,$last_entry->id,$last_entry->deviceTypeID);
+	        }else{
+	        	$action_message = array(
+	        			'css_class'	 => 'alert alert-danger',
+	        			'msg'		 => 'an error occured',
+	        		);
+	        	$this->index($action_message);
+	        }
 		}
 	}
 
 
-	function step_2($action_message){
+	function step_2($action_message,$id,$deviceTypeID){
 		if(!$action_message){
 			$action_message = array(
 					'css_class' 	=> 'alert alert-danger',
@@ -126,7 +125,7 @@ class deviceManagement extends MY_Controller{
 				);
 			$this->index($action_message);
 		}else{
-			$data['message'] = $action_message;
+
 			$table_to_join = array(
 					array(
 							'table_name' => 'device-attribute',
@@ -140,125 +139,68 @@ class deviceManagement extends MY_Controller{
 						)
 				);
 
-			$data['stored_sess_info'] = $this->session->all_userdata();
+			
+			$data['deviceID'] = $id;
 
 			$select = 'device-attribute.id,device-attribute.enName,device-attribute.arName,device-attribute-unit.name,device-attribute.attributeType';
-			$data['attributes'] = $this->deviceModel->getAll('device-attribute-type',$table_to_join,$select,array('deviceTypeID'=>$data['stored_sess_info']['deviceTypeID']));
+			$data['attributes'] = $this->deviceModel->getAll('device-attribute-type',$table_to_join,$select,array('deviceTypeID'=>$deviceTypeID));
 
 			$this->load->template($this->viewDirectoryName."/step_2.php",$data);
 		}
 	}
 
-	function insert_step_2(){
-		
-		$attributes = $this->input->post('attribute');
-
-
-
-		$this->session->set_userdata('attributes',serialize($attributes));
-	        
-
-	        /**
-	        * move to phase two
-	        * pahse two must have the id of the device and it's type to get the correct attributes
-	        */
-	       $action_message = array(
-					'css_class' 	=> 'alert alert-success',
-					'msg'			=> 'step 2 has done seccessfully now you must enter device specification',
-				);
-
-	        $this->step_3($action_message);
-
-	}
-
-	function step_3($action_message){
-		if(!$action_message){
-			$action_message = array(
-					'css_class' 	=> 'alert alert-danger',
-					'msg'			=> 'you\'re not allowed to do this action',
-				);
-		}else{
-			$data['stored_sess_info'] = $this->session->all_userdata(); 
-			$this->load->template($this->viewDirectoryName."/step_3.php",$data);
-		}
-		
-	}
-
-	/**
-	 * this function was added for security
-	 * 
-	 */
-	function move_to_step_2(){
-		/*it's not empty and it's not an array so the message will not apear*/
-		$this->step_2('s');
-	}
 
 	function insert_final(){
-		$stored_sess_info = $this->session->all_userdata();
-		$values = array(
-				'name'			=> $stored_sess_info['deviceName'],
-				'deviceTypeID' 	=> $stored_sess_info['deviceTypeID'],
-				'brandID'		=> $stored_sess_info['brandID'],
-				'date'			=> $stored_sess_info['date'],
-				'photo' 		=> $stored_sess_info['devicePhoto']
-			);
-		$q = $this->deviceModel->insert_new('device',$values);
+		$attributes = $this->input->post('attribute');
+		$deviceID = $this->input->post('deviceID');
+		if(is_array($attributes)){
+			foreach ($attributes as $attr) {
+				$values = array(
+					'deviceID' 			=> $deviceID,
+					'deviceAttributeID' => $attr['id'],
+					'value'				=> $attr['value'],
+				);
+				$q = $this->deviceModel->insert_new('device-property',$values);
 
-		$deviceID = $this->deviceModel->get_last()->id;
-		if($deviceID && $q){
-			/*inserting attributes*/
-			$attributes = @unserialize($stored_sess_info['attributes']);
-			if($attributes && is_array($attributes)){
-				foreach ($attributes as $attr) {
-					$values = array(
-						'deviceID' => $deviceID,
-						'deviceAttributeID' => $attr['id'],
-						'value'	=> $attr['value'], 
-					);
-					$f = $this->deviceModel->insert_new('device-property',$values);
-					if(!$f)
-						break;
-				}
+				if(!$q)
+					break;
 			}
+		}
 
-
-			/*inserting device for sale*/
-			$values = array(
-					'date' => date('Y-m-d'),
-					'price' => $this->input->post('price'),
-					'isNew' => $this->input->post('isNew'),
-					'state' => $this->input->post('state'),
-					'deviceID' => $deviceID,
+		if($q){
+			$action_message = array(
+					'css_class'	=> 'alert alert-success',
+					'msg'	=> 'inserting is done successfully',
 				);
-			$d = $this->deviceModel->insert_new('device-for-sale',$values);
-
-			if($q && $d){
-				$action_message = array(
-					'css_class' 	=> 'alert alert-success',
-					'msg'			=> 'inserting has done successfully',
-				);
-			}else{
-				$action_message = array(
-					'css_class' 	=> 'alert alert-error',
-					'msg'			=> 'inserting not done successfully',
-				);
-			}
 		}else{
-			 $action_message = array(
-					'css_class' 	=> 'alert alert-danger',
-					'msg'			=> 'inserting not done successfully',
+			$action_message = array(
+					'css_class'	=> 'alert alert-danger',
+					'msg'	=> 'an error occured',
 				);
 		}
 
-		$this->unset_sess_info();
 		$this->index($action_message);
 	}
 
 	function cancel_inserting(){
 
-		$this->unset_sess_info();
+		$last_entry = $this->deviceModel->get_last(); 
 
-		$this->index();
+		$q = $this->deviceModel->delete('device',$last_entry->id);
+
+		if($q){
+			$action_message = array(
+					'css_class'	=> 'alert',
+					'msg'	=> 'you have cancelled inserting',
+				);
+		}else{
+			$action_message = array(
+					'css_class'	=> 'alert alert-danger',
+					'msg'	=> 'an error occured',
+				);
+		}
+
+		$this->index($action_message);
 	}
 
 
@@ -276,7 +218,8 @@ class deviceManagement extends MY_Controller{
 					$data['brands'][$brand->id]=$brand->name; 
 				}
 			}
-			$where = 'id !='.$this->accessoire_field_id;
+			
+			$where = 'id ='.$this->accessoire_field_id;
 			$devices = $this->deviceModel->getAll('device-type',null,null,$where);
 			if($devices){
 				foreach ($devices as $device) {
@@ -288,8 +231,6 @@ class deviceManagement extends MY_Controller{
 			/*getting labels*/
 			
 			$data['attributes'] = $this->deviceModel->excute_query("SELECT `device-property`.`id` as property_id,`device-attribute`.`id`, `device-attribute`.`enName`, `device-attribute`.`arName`, `device-attribute-unit`.`name`, `device-attribute`.`attributeType`,`device-property`.`value` FROM (`device-attribute-type`) JOIN `device-attribute` ON `deviceAttributeID`=`device-attribute`.`id` JOIN `device-attribute-unit` ON `deviceAttributeUnitID`=`device-attribute-unit`.`id` JOIN `device-property` ON `device-attribute`.`id`=`device-property`.`deviceAttributeID` WHERE `deviceTypeID` = ".$data['device']->deviceTypeID ." AND `device-property`.`deviceID`=".$data['device']->id);
-
-			$data['status'] = $this->deviceModel->get('device-for-sale',array('deviceId'=>$data['device']->id));
 
 			$this->load->template($this->viewDirectoryName.'/edit',$data);
 
@@ -358,16 +299,6 @@ class deviceManagement extends MY_Controller{
 				}
 			}
 
-
-			/*updating device stats*/
-			$values = array(
-					'price' => $this->input->post('price'),
-					'isNew' => $this->input->post('isNew'),
-					'state' => $this->input->post('state'),
-				);
-			$q = $this->deviceModel->update('device-for-sale',$this->input->post('recoed_id'),$values);
-
-
 			if($q){
 				$action_message = array(
 						'css_class'	=> 'alert alert-success',
@@ -398,9 +329,6 @@ class deviceManagement extends MY_Controller{
 			$q = $this->deviceModel->delete('device',$deviceID);
 
 			$f = $this->deviceModel->delete('device-property',array('deviceID'=>$deviceID));
-
-			$d = $this->deviceModel->delete('device-for-sale',array('deviceID'=>$deviceID));
-			
 			if($q){
 				$action_message = array(
 					'css_class'	=> 'alert alert-success',
@@ -425,22 +353,23 @@ class deviceManagement extends MY_Controller{
 
 
 	function _generate_field($id,$type,$value = '',$property_id = null){
-		echo '<input type="hidden" name="attribute['.$id.'][id]"  value="'.$id.'" />';
+		$rand = rand(0,1000);
+		echo '<input type="hidden" name="attribute['.$rand.'][id]"  value="'.$id.'" />';
 		if(!is_null($property_id)){
-			echo '<input type="hidden" name="attribute['.$id.'][property_id]"  value="'.$property_id.'" />';
+			echo '<input type="hidden" name="attribute['.$rand.'][property_id]"  value="'.$property_id.'" />';
 		}
 		switch ($type) {
 			case '1':
-				echo '<input type="number" name="attribute['.$id.'][value]"  value="'.$value.'" />';
+				echo '<input type="number" name="attribute['.$rand.'][value]"  value="'.$value.'" />';
 				
 				break;
 
 			case '2':
-				echo '<input type="number" name="attribute['.$id.'][value]"  value="'.$value.'" />';
+				echo '<input type="number" name="attribute['.$rand.'][value]"  value="'.$value.'" />';
 				break;
 
 			case '3':
-				echo '<input type="text" name="attribute['.$id.'][value]"  value="'.$value.'" />';
+				echo '<input type="text" name="attribute['.$rand.'][value]"  value="'.$value.'" />';
 				break;
 			
 			default:
@@ -448,26 +377,5 @@ class deviceManagement extends MY_Controller{
 				break;
 		}
 	}
-
-
-	function _check_value($value,$key = ''){
-		if(is_array($value) && in_array($key,array_keys($value)))
-			return $value[$key];
-		if(!is_array($value) && !empty($value) && !is_null($value) && isset($value) && $value != '')
-			return $value;
-		return '';
-	}
-
-	function unset_sess_info(){
-		$this->session->unset_userdata('stored_sess_info');
-		$this->session->unset_userdata('deviceName');
-		$this->session->unset_userdata('deviceTypeID');
-		$this->session->unset_userdata('brandID');
-		$this->session->unset_userdata('date');
-		$this->session->unset_userdata('devicePhoto');
-		$this->session->unset_userdata('attributes');
-	}
-
-	
 	
 }
