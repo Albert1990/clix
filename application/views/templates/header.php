@@ -9,10 +9,19 @@
     <link rel="stylesheet" type="text/css" href="<?=base_url('lib/bootstrap/css/bootstrap.css')?>">
 
     <link rel="stylesheet" type="text/css" href="<?=base_url('stylesheets/theme.css')?>">
-    <link rel="stylesheet" href="<?= base_url('lib/font-awesome/css/font-awesome.css')?>">
+<!--    <link rel="stylesheet" href="--><?//= base_url('lib/font-awesome/css/font-awesome.css')?><!--">-->
 
 
-    <script src="<?=base_url('lib/jquery-1.7.2.min.js')?>" type="text/javascript"></script>
+    <script src="<?=base_url('js/jquery-1.8.2.min.js')?>" type="text/javascript"></script>
+<!--    <script type="text/javascript" src="--><?//=base_url('js/main.js')?><!--"></script>-->
+
+    <script type="text/javascript" src="<?=base_url('tinymce/js/tinymce/tinymce.min.js')?>"></script>
+    <script type="text/javascript">
+        tinymce.init({
+            selector: "textarea"
+        });
+    </script>
+
 
     <!-- Demo page code -->
 
@@ -36,7 +45,7 @@
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <!--<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
     <![endif]-->
 
     <!-- Le fav and touch icons -->
@@ -48,5 +57,5 @@
 
     <!--my scripts and styles-->
     <link rel="stylesheet" href="<?=base_url('css/myStyle.css')?>">
-    <script type="text/javascript" src="<?=base_url('js/main.js')?>"></script>
+    <script type="text/javascript" src="<?=base_url('js/userCartManager.js')?>"></script>
 </head>

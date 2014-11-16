@@ -47,8 +47,8 @@ class accessoireManagement extends MY_Controller{
 			);
 		$select = 'device.id,device.name,device.photo,device-type.name as typeName,brand.name as brandName,device.date';
 		$where = 'device-type.id ='.$this->accessoire_field_id;
-		$data['devices'] = $this->deviceModel->getAll('device',$table_to_join,$select,$where);
-		$this->load->template($this->viewDirectoryName.'/index.php',$data); 
+		$this->data['devices'] = $this->deviceModel->getAll('device',$table_to_join,$select,$where);
+		$this->load->template($this->viewDirectoryName.'/index.php',$this->data); 
 	}
 
 	function create(){
@@ -56,18 +56,19 @@ class accessoireManagement extends MY_Controller{
 		$brands = $this->deviceModel->getAll('brand');
 		if($brands){
 			foreach ($brands as $brand) {
-				$data['brands'][$brand->id]=$brand->name; 
+				$this->data['brands'][$brand->id]=$brand->name; 
 			}
 		}
 		$where = 'id ='.$this->accessoire_field_id;
 		$devices = $this->deviceModel->getAll('device-type',null,null,$where);
+        var_dump($devices);
 		if($devices){
 			foreach ($devices as $device) {
-				$data['devices'][$device->id] = $device->name;
+				$this->data['devices'][$device->id] = $device->name;
 			}
 		}
 
-		$this->load->template($this->viewDirectoryName."/create.php",$data);
+		$this->load->template($this->viewDirectoryName."/create.php",$this->data);
 	}
 	
 	function insert_1(){
@@ -140,12 +141,12 @@ class accessoireManagement extends MY_Controller{
 				);
 
 			
-			$data['deviceID'] = $id;
+			$this->data['deviceID'] = $id;
 
 			$select = 'device-attribute.id,device-attribute.enName,device-attribute.arName,device-attribute-unit.name,device-attribute.attributeType';
-			$data['attributes'] = $this->deviceModel->getAll('device-attribute-type',$table_to_join,$select,array('deviceTypeID'=>$deviceTypeID));
+			$this->data['attributes'] = $this->deviceModel->getAll('device-attribute-type',$table_to_join,$select,array('deviceTypeID'=>$deviceTypeID));
 
-			$this->load->template($this->viewDirectoryName."/step_2.php",$data);
+			$this->load->template($this->viewDirectoryName."/step_2.php",$this->data);
 		}
 	}
 
@@ -208,14 +209,14 @@ class accessoireManagement extends MY_Controller{
 
 		$device_id = $this->uri->segment(3);
 
-		$data['device'] = $this->deviceModel->get('device',array('id'=>$device_id));
+		$this->data['device'] = $this->deviceModel->get('device',array('id'=>$device_id));
 
-		if($data['device']){
+		if($this->data['device']){
 
 			$brands = $this->deviceModel->getAll('brand');
 			if($brands){
 				foreach ($brands as $brand) {
-					$data['brands'][$brand->id]=$brand->name; 
+					$this->data['brands'][$brand->id]=$brand->name; 
 				}
 			}
 			
@@ -223,16 +224,16 @@ class accessoireManagement extends MY_Controller{
 			$devices = $this->deviceModel->getAll('device-type',null,null,$where);
 			if($devices){
 				foreach ($devices as $device) {
-					$data['devices'][$device->id] = $device->name;
+					$this->data['devices'][$device->id] = $device->name;
 				}
 			}
 
 
 			/*getting labels*/
 			
-			$data['attributes'] = $this->deviceModel->excute_query("SELECT `device-property`.`id` as property_id,`device-attribute`.`id`, `device-attribute`.`enName`, `device-attribute`.`arName`, `device-attribute-unit`.`name`, `device-attribute`.`attributeType`,`device-property`.`value` FROM (`device-attribute-type`) JOIN `device-attribute` ON `deviceAttributeID`=`device-attribute`.`id` JOIN `device-attribute-unit` ON `deviceAttributeUnitID`=`device-attribute-unit`.`id` JOIN `device-property` ON `device-attribute`.`id`=`device-property`.`deviceAttributeID` WHERE `deviceTypeID` = ".$data['device']->deviceTypeID ." AND `device-property`.`deviceID`=".$data['device']->id);
+			$this->data['attributes'] = $this->deviceModel->excute_query("SELECT `device-property`.`id` as property_id,`device-attribute`.`id`, `device-attribute`.`enName`, `device-attribute`.`arName`, `device-attribute-unit`.`name`, `device-attribute`.`attributeType`,`device-property`.`value` FROM (`device-attribute-type`) JOIN `device-attribute` ON `deviceAttributeID`=`device-attribute`.`id` JOIN `device-attribute-unit` ON `deviceAttributeUnitID`=`device-attribute-unit`.`id` JOIN `device-property` ON `device-attribute`.`id`=`device-property`.`deviceAttributeID` WHERE `deviceTypeID` = ".$this->data['device']->deviceTypeID ." AND `device-property`.`deviceID`=".$this->data['device']->id);
 
-			$this->load->template($this->viewDirectoryName.'/edit',$data);
+			$this->load->template($this->viewDirectoryName.'/edit',$this->data);
 
 		}else{
 			$action_message = array(

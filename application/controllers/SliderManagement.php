@@ -20,13 +20,13 @@ class SliderManagement extends MY_Controller
     }
     function index()
     {
-        $data['slides']=$this->SliderModel->getAll();
-        $this->load->template($this->viewDirectoryName.'/index',$data);
+        $this->data['slides']=$this->SliderModel->getAll();
+        $this->load->template($this->viewDirectoryName.'/index',$this->data);
     }
     function create()
     {
-        $data['languages']=$this->LanguageModel->getAll();
-        $this->load->template($this->viewDirectoryName."/create",$data);
+        $this->data['languages']=$this->LanguageModel->getAll();
+        $this->load->template($this->viewDirectoryName."/create",$this->data);
     }
 
     function insert()
@@ -60,9 +60,9 @@ class SliderManagement extends MY_Controller
     function edit()
     {
         $slideID=$this->uri->segment(3);
-        $data['slide']=$this->SliderModel->get($slideID);
-        $data['languages']=$this->LanguageModel->getAll();
-        $this->load->template($this->viewDirectoryName.'/edit',$data);
+        $this->data['slide']=$this->SliderModel->get($slideID);
+        $this->data['languages']=$this->LanguageModel->getAll();
+        $this->load->template($this->viewDirectoryName.'/edit',$this->data);
     }
     function update()
     {

@@ -8,7 +8,8 @@ class MY_Loader extends CI_Loader {
     public function template($template_name, $vars = array(), $return = FALSE)
     {
         $vars['viewName']=$template_name;
-        $content  = $this->view('templates/start', $vars, $return);
+        $startViewPage=$vars['startPageView'];
+        $content  = $this->view($startViewPage, $vars, $return);
 //        $content  .= $this->view('templates/header', $vars, $return);
 //        $content .= $this->view($template_name, $vars, $return);
 //        $content .= $this->view('templates/footer', $vars, $return);

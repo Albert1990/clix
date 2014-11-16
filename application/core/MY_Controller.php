@@ -28,6 +28,12 @@ class MY_Controller  extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $controllerName= $this->uri->segment(1);
+        $this->data['startPageView']='templates/start1';
+        if (strpos($controllerName,'Management') !== false) {
+            //echo 'true';
+            $this->data['startPageView']='templates/start';
+        }
         $this->load->model('userModel');
     }
 

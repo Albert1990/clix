@@ -10,7 +10,6 @@
 class NewsManagement extends MY_Controller
 {
     private $viewDirectoryName="NewsManagement";
-    private $data;
 
     public function __construct()
     {
@@ -21,23 +20,23 @@ class NewsManagement extends MY_Controller
     }
     function index()
     {
-        $data['news']=$this->NewsModel->getAll();
-        $data['languages']=$this->LanguageModel->getAll();
+        $this->data['news']=$this->NewsModel->getAll();
+        $this->data['languages']=$this->LanguageModel->getAll();
 
-        $this->load->template($this->viewDirectoryName.'/index',$data);
+        $this->load->template($this->viewDirectoryName.'/index',$this->data);
     }
 
     function create()
     {
-        $data['languages']=$this->LanguageModel->getAll();
+        $this->data['languages']=$this->LanguageModel->getAll();
        
-        if($data['languages'] === false){
-            $data['languages'][1] = new stdClass();
-            $data['languages'][1]->id = 1;
-            $data['languages'][1]->name = 'english';
+        if($this->data['languages'] === false){
+            $this->data['languages'][1] = new stdClass();
+            $this->data['languages'][1]->id = 1;
+            $this->data['languages'][1]->name = 'english';
         }
 
-        $this->load->template($this->viewDirectoryName."/create",$data);
+        $this->load->template($this->viewDirectoryName."/create",$this->data);
     }
 
     function insert()
@@ -74,9 +73,9 @@ class NewsManagement extends MY_Controller
     function edit()
     {
         $newsID=$this->uri->segment(3);
-        $data['news']=$this->NewsModel->get($newsID);
-        $data['languages']=$this->LanguageModel->getAll();
-        $this->load->template($this->viewDirectoryName.'/edit',$data);
+        $this->data['news']=$this->NewsModel->get($newsID);
+        $this->data['languages']=$this->LanguageModel->getAll();
+        $this->load->template($this->viewDirectoryName.'/edit',$this->data);
     }
     function update()
     {

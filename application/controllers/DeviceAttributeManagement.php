@@ -37,7 +37,7 @@ class DeviceAttributeManagement extends MY_Controller
 	function index($message = array()){
 
 		if(is_array($message) && !empty($message)){
-			$data['message'] = $message;
+			$this->data['message'] = $message;
 		}
 		$tables_to_join = array(
 				array(
@@ -48,8 +48,8 @@ class DeviceAttributeManagement extends MY_Controller
 				
 			);
 		$select = 'device-attribute.id,arName,enName,attributeType,device-attribute-unit.name';
-		$data['attrs'] = $this->deviceModel->getAll('device-attribute',$tables_to_join,$select);
-		$this->load->template($this->viewDirectoryName.'/index.php',$data);
+		$this->data['attrs'] = $this->deviceModel->getAll('device-attribute',$tables_to_join,$select);
+		$this->load->template($this->viewDirectoryName.'/index.php',$this->data);
 	}
 
 	/**
@@ -66,14 +66,14 @@ class DeviceAttributeManagement extends MY_Controller
 		$units = $this->deviceModel->getAll('device-attribute-unit');
 		if($units){
 			foreach ($units as $unit) {
-				$data['units'][$unit->id] = $unit->name;	
+				$this->data['units'][$unit->id] = $unit->name;	
 			}
 
 		}
 
-		$data['types'] = $this->types;
+		$this->data['types'] = $this->types;
 
-		$this->load->template($this->viewDirectoryName.'/create.php',$data);
+		$this->load->template($this->viewDirectoryName.'/create.php',$this->data);
 	}
 
 
@@ -169,20 +169,20 @@ class DeviceAttributeManagement extends MY_Controller
 			$post_id = $this->uri->segment(3);
 		}
 
-		$data['attribute'] = $this->deviceModel->get('device-attribute',array('id'=>$post_id));
+		$this->data['attribute'] = $this->deviceModel->get('device-attribute',array('id'=>$post_id));
 		
-		if($data['attribute']){
+		if($this->data['attribute']){
 
 			$units = $this->deviceModel->getAll('device-attribute-unit');
 			if($units){
 				foreach ($units as $unit) {
-					$data['units'][$unit->id] = $unit->name;	
+					$this->data['units'][$unit->id] = $unit->name;	
 				}
 			}
 
-		$data['types'] = $this->types;
+		$this->data['types'] = $this->types;
 
-			$this->load->template($this->viewDirectoryName.'/edit.php',$data);
+			$this->load->template($this->viewDirectoryName.'/edit.php',$this->data);
 
 		}else{
 			$action_message = array(

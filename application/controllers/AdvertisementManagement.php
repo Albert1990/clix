@@ -20,14 +20,14 @@ class AdvertisementManagement extends MY_Controller
     }
     function index()
     {
-        $data['ads']=$this->AdvertisementModel->getAll();
-        $data['languages']=$this->LanguageModel->getAll();
-        $this->load->template($this->viewDirectoryName.'/index',$data);
+        $this->data['ads']=$this->AdvertisementModel->getAll();
+        $this->data['languages']=$this->LanguageModel->getAll();
+        $this->load->template($this->viewDirectoryName.'/index',$this->data);
     }
     function create()
     {
-        $data['languages']=$this->LanguageModel->getAll();
-        $this->load->template($this->viewDirectoryName."/create",$data);
+        $this->data['languages']=$this->LanguageModel->getAll();
+        $this->load->template($this->viewDirectoryName."/create",$this->data);
     }
 
     function insert()
@@ -61,9 +61,9 @@ class AdvertisementManagement extends MY_Controller
     function edit()
     {
         $advertisementID=$this->uri->segment(3);
-        $data['advertise']=$this->AdvertisementModel->get($advertisementID);
-        $data['languages']=$this->LanguageModel->getAll();
-        $this->load->template($this->viewDirectoryName.'/edit',$data);
+        $this->data['advertise']=$this->AdvertisementModel->get($advertisementID);
+        $this->data['languages']=$this->LanguageModel->getAll();
+        $this->load->template($this->viewDirectoryName.'/edit',$this->data);
     }
     function update()
     {

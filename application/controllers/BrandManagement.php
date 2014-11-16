@@ -19,12 +19,12 @@ class BrandManagement extends MY_Controller
     }
     function index()
     {
-        $data['brands']=$this->BrandModel->getAll();
-        $this->load->template($this->viewDirectoryName.'/index',$data);
+        $this->data['brands']=$this->BrandModel->getAll();
+        $this->load->template($this->viewDirectoryName.'/index',$this->data);
     }
     function create()
     {
-        $this->load->template($this->viewDirectoryName."/create");
+        $this->load->template($this->viewDirectoryName."/create",$this->data);
     }
 
     function insert()
@@ -55,8 +55,8 @@ class BrandManagement extends MY_Controller
     function edit()
     {
         $brandID=$this->uri->segment(3);
-        $data['brand']=$this->BrandModel->get($brandID);
-        $this->load->template($this->viewDirectoryName.'/edit',$data);
+        $this->data['brand']=$this->BrandModel->get($brandID);
+        $this->load->template($this->viewDirectoryName.'/edit',$this->data);
     }
     function update()
     {

@@ -4,7 +4,7 @@
         <?=form_open_multipart('attributeUnitManagement/insert')?>
         <div class="btn-toolbar">
             <input type="submit" name="deviceSubmit" value="Save" class="btn btn-primary">
-            <?=anchor('attributeUnitManagement/index','Cancel','class="btn" data-toggle="modal"')?>
+            <?=anchor('attributeUnitManagement/index','Cancel','class="btn"')?>
 <!--            <a href="#myModal" data-toggle="modal" class="btn">Cancel</a>-->
             <div class="btn-group">
             </div>
