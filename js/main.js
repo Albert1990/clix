@@ -79,11 +79,11 @@ $(document).ready(function(){
 
 });
 
-btnDeleteIsClicked=function(e){
-    e.preventDefault();
+var btnDeleteIsClicked = function(e){
     console.log('show dialog');
     deleteLink=$(this).attr('href');
     $('#deleteConfirmationDialog').show();
+	e.preventDefault();
 };
 
 function delete_disable(){
