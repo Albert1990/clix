@@ -27,10 +27,10 @@
                        $attrs = null;
                        if(in_array('attributes',array_keys($stored_sess_info))){
                         $attrs = unserialize($stored_sess_info['attributes']);
-                        //var_dump($attrs);
+                        var_dump($attrs);
                        }
                         
-                       //var_dump($attributes);
+                       var_dump($attributes);
 
                        if(isset($attributes) && is_array($attributes)){                         
                             foreach($attributes as $attr){

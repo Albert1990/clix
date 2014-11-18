@@ -16,7 +16,7 @@
         <div class="well">
             <ul class="nav nav-tabs">
               <li class="active"><a href="#typeName" data-toggle="tab">type Name</a></li>
-<!--              <li><a href="#typeAttributes" data-toggle="tab">type attributes</a></li>-->
+              <li><a href="#typeAttributes" data-toggle="tab">type attributes</a></li>
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane active in" id="typeName">

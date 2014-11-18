@@ -4,7 +4,7 @@
         <?=form_open_multipart('DeviceAttributeManagement/insert')?>
         <div class="btn-toolbar">
             <input type="submit" name="deviceSubmit" value="Save" class="btn btn-primary">
-            <?=anchor('DeviceAttributeManagement/index','Cancel','class="btn"')?>
+            <?=anchor('DeviceAttributeManagement/index','Cancel','class="btn" data-toggle="modal"')?>
 <!--            <a href="#myModal" data-toggle="modal" class="btn">Cancel</a>-->
             <div class="btn-group">
             </div>
@@ -22,16 +22,12 @@
 
                         <?php if(isset($units) && is_array($units)): ?>
                             <label>attribute unit</label>
-                            <?php
-                            echo form_dropdown('attributeUnitID',$units,'')
-                            ?>
+                            <?php echo form_dropdown('attributeUnitID',$units,'') ?>
                         <?php endif; ?>
 
                         <?php if(isset($types) && is_array($types)): ?>
                             <label>attribute type</label>
-                            <?php
-                            echo form_dropdown('attributeTypeID',$types,'')
-                            ?>
+                            <?php echo form_dropdown('attributeTypeID',$types,'') ?>
                         <?php endif; ?>
 
                         
