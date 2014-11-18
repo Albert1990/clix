@@ -35,11 +35,11 @@ class attributeUnitManagement extends MY_Controller
 	function index($message = array()){
 
 		if(is_array($message) && !empty($message)){
-			$this->data['message'] = $message;
+			$data['message'] = $message;
 		}
 
-		$this->data['units'] = $this->deviceModel->getAll('device-attribute-unit');
-		$this->load->template($this->viewDirectoryName.'/index.php',$this->data);
+		$data['units'] = $this->deviceModel->getAll('device-attribute-unit');
+		$this->load->template($this->viewDirectoryName.'/index.php',$data);
 	}
 
 	/**
@@ -52,7 +52,7 @@ class attributeUnitManagement extends MY_Controller
      * @author Mohammed Manssour <manssour.mohammed@gmail.com>
      */
 	function create(){
-		$this->load->template($this->viewDirectoryName.'/create.php',$this->data);
+		$this->load->template($this->viewDirectoryName.'/create.php');
 	}
 
 
@@ -143,11 +143,11 @@ class attributeUnitManagement extends MY_Controller
 			$post_id = $this->uri->segment(3);
 		}
 
-		$this->data['unit'] = $this->deviceModel->get('device-attribute-unit',array('id'=>$post_id));
+		$data['unit'] = $this->deviceModel->get('device-attribute-unit',array('id'=>$post_id));
 		
-		if($this->data['unit']){
+		if($data['unit']){
 
-			$this->load->template($this->viewDirectoryName.'/edit.php',$this->data);
+			$this->load->template($this->viewDirectoryName.'/edit.php',$data);
 
 		}else{
 			$action_message = array(

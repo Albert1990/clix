@@ -36,11 +36,11 @@ class deviceTypeManagement extends MY_Controller
 	function index($message = array()){
 
 		if(is_array($message) && !empty($message)){
-			$this->data['message'] = $message;
+			$data['message'] = $message;
 		}
 
-		$this->data['types'] = $this->deviceModel->getAll('device-type');
-		$this->load->template($this->viewDirectoryName.'/index.php',$this->data);
+		$data['types'] = $this->deviceModel->getAll('device-type');
+		$this->load->template($this->viewDirectoryName.'/index.php',$data);
 	}
 
 	/**
@@ -53,7 +53,7 @@ class deviceTypeManagement extends MY_Controller
      * @author Mohammed Manssour <manssour.mohammed@gmail.com>
      */
 	function create(){
-		$this->load->template($this->viewDirectoryName.'/create.php',$this->data);
+		$this->load->template($this->viewDirectoryName.'/create.php');
 	}
 
 
@@ -142,15 +142,15 @@ class deviceTypeManagement extends MY_Controller
 			$post_id = $this->uri->segment(3);
 		}
 
-		$this->data['type'] = $this->deviceModel->get('device-type',array('id'=>$post_id));
+		$data['type'] = $this->deviceModel->get('device-type',array('id'=>$post_id));
 		
-		if($this->data['type']){
+		if($data['type']){
 
 			/*getting all attributes*/
 			$attrs = $this->deviceModel->getAll('device-attribute');
 			if($attrs){
 				foreach ($attrs as $attr) {
-					$this->data['attributes'][$attr->id] = $attr->enName;
+					$data['attributes'][$attr->id] = $attr->enName;
 				}
 			}
 
@@ -166,9 +166,9 @@ class deviceTypeManagement extends MY_Controller
 						)
 				);
 			$select = 'device-attribute.id,device-attribute.enName';
-			$this->data['deviceAttributes'] = $this->deviceModel->getAll('device-attribute-type',$table_to_join,$select,array('deviceTypeID'=>$this->data['type']->id));
+			$data['deviceAttributes'] = $this->deviceModel->getAll('device-attribute-type',$table_to_join,$select,array('deviceTypeID'=>$data['type']->id));
 
-			$this->load->template($this->viewDirectoryName.'/edit.php',$this->data);
+			$this->load->template($this->viewDirectoryName.'/edit.php',$data);
 
 		}else{
 			$action_message = array(
@@ -196,9 +196,13 @@ class deviceTypeManagement extends MY_Controller
 				$name = $this->input->post('name');
 				$q = $this->deviceModel->update('device-type',$post_id,	array('name'=>$name));
 
+				$attributes = $this->input->post('attributes'); 
+				if(isset($attributes) && is_array($attributes)){
+					$attributes = array_unique($this->input->post('attributes'));
+				}else{
+					$attributes = array();
+				}
 				
-
-				$attributes = array_unique($this->input->post('attributes'));
 
 				/*delete all old attrs for the deviceType*/
 				$q_deletion = $this->deviceModel->delete('device-attribute-type',array('deviceTypeID'=>$post_id));

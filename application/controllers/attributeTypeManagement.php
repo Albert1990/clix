@@ -35,11 +35,11 @@ class attributeTypeManagement extends MY_Controller
 	function index($message = array()){
 
 		if(is_array($message) && !empty($message)){
-			$this->data['message'] = $message;
+			$data['message'] = $message;
 		}
 
-		$this->data['types'] = $this->deviceModel->getAll('attribute-type');
-		$this->load->template($this->viewDirectoryName.'/index.php',$this->data);
+		$data['types'] = $this->deviceModel->getAll('attribute-type');
+		$this->load->template($this->viewDirectoryName.'/index.php',$data);
 	}
 
 	/**
@@ -52,7 +52,7 @@ class attributeTypeManagement extends MY_Controller
      * @author Mohammed Manssour <manssour.mohammed@gmail.com>
      */
 	function create(){
-		$this->load->template($this->viewDirectoryName.'/create.php',$this->data);
+		$this->load->template($this->viewDirectoryName.'/create.php');
 	}
 
 
@@ -133,11 +133,11 @@ class attributeTypeManagement extends MY_Controller
 			$post_id = $this->uri->segment(3);
 		}
 
-		$this->data['type'] = $this->deviceModel->get('attribute-type',array('id'=>$post_id));
+		$data['type'] = $this->deviceModel->get('attribute-type',array('id'=>$post_id));
 		
-		if($this->data['type']){
+		if($data['type']){
 
-			$this->load->template($this->viewDirectoryName.'/edit.php',$this->data);
+			$this->load->template($this->viewDirectoryName.'/edit.php',$data);
 
 		}else{
 			$action_message = array(
