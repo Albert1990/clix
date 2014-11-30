@@ -36,11 +36,11 @@ class deviceTypeManagement extends MY_Controller
 	function index($message = array()){
 
 		if(is_array($message) && !empty($message)){
-			$data['message'] = $message;
+			$this->data['message'] = $message;
 		}
 
-		$data['types'] = $this->deviceModel->getAll('device-type');
-		$this->load->template($this->viewDirectoryName.'/index.php',$data);
+		$this->data['types'] = $this->deviceModel->getAll('device-type');
+		$this->load->template($this->viewDirectoryName.'/index.php',$this->data);
 	}
 
 	/**
@@ -142,15 +142,15 @@ class deviceTypeManagement extends MY_Controller
 			$post_id = $this->uri->segment(3);
 		}
 
-		$data['type'] = $this->deviceModel->get('device-type',array('id'=>$post_id));
+		$this->data['type'] = $this->deviceModel->get('device-type',array('id'=>$post_id));
 		
-		if($data['type']){
+		if($this->data['type']){
 
 			/*getting all attributes*/
 			$attrs = $this->deviceModel->getAll('device-attribute');
 			if($attrs){
 				foreach ($attrs as $attr) {
-					$data['attributes'][$attr->id] = $attr->enName;
+					$this->data['attributes'][$attr->id] = $attr->enName;
 				}
 			}
 
@@ -166,9 +166,9 @@ class deviceTypeManagement extends MY_Controller
 						)
 				);
 			$select = 'device-attribute.id,device-attribute.enName';
-			$data['deviceAttributes'] = $this->deviceModel->getAll('device-attribute-type',$table_to_join,$select,array('deviceTypeID'=>$data['type']->id));
+			$this->data['deviceAttributes'] = $this->deviceModel->getAll('device-attribute-type',$table_to_join,$select,array('deviceTypeID'=>$this->data['type']->id));
 
-			$this->load->template($this->viewDirectoryName.'/edit.php',$data);
+			$this->load->template($this->viewDirectoryName.'/edit.php',$this->data);
 
 		}else{
 			$action_message = array(

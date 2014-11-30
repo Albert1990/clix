@@ -2,8 +2,9 @@
     <div class="row-fluid">
 
         <div class="btn-toolbar">
-            <a href="<?=site_url('NewsManagement/create')?>" class="btn btn-primary"><i class="icon-plus"></i>New News</a>
+            <a href="<?= site_url('NewsManagement/create') ?>" class="btn btn-primary"><i class="icon-plus"></i>New News</a>
             <input type="text" class="txtFilter" placeholder="user name">
+
             <div class="btn-group">
             </div>
         </div>
@@ -22,25 +23,23 @@
                 </tr>
                 </thead>
                 <tbody>
-                <?
-                if($userCarts)
-                {
-                $counter=1;
-                foreach( $userCarts as $userCart)
-                {
-                    ?>
-                    <tr id="userCart<?=$userCart->id?>">
-                        <td><?=$counter?></td>
-                        <td><?=$userCart->userName?></td>
-                        <td><?=$userCart->mobileNumber?></td>
-                        <td><?=$userCart->deviceName?></td>
-                        <td class="photoCol"><?=img($userCart->devicePhoto)?></td>
-                        <td class="photoCol"><?=img($this->generateThumbPhoto($userCart->brandPhoto))?></td>
-                        <td><?=$userCart->date?></td>
-                    </tr>
-                    <?
-                    $counter++;
-                }
+                <?php
+                if ($userCarts) {
+                    $counter = 1;
+                    foreach ($userCarts as $userCart) {
+                        ?>
+                        <tr id="userCart<?= $userCart->id ?>">
+                            <td><?= $counter ?></td>
+                            <td><?= $userCart->userName ?></td>
+                            <td><?= $userCart->mobileNumber ?></td>
+                            <td><?= $userCart->deviceName ?></td>
+                            <td class="photoCol"><?= img($userCart->devicePhoto) ?></td>
+                            <td class="photoCol"><?= img($this->generateThumbPhoto($userCart->brandPhoto)) ?></td>
+                            <td><?= $userCart->date ?></td>
+                        </tr>
+                        <?
+                        $counter++;
+                    }
                 }
                 ?>
                 </tbody>

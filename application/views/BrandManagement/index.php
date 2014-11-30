@@ -29,9 +29,9 @@
                         <td class="photoCol"><?=img($this->generateThumbPhoto($brand->photo))?></td>
                         <td><?=$brand->name?></td>
                         <td>
-                            <a href="<?=site_url('BrandManagement/edit/'.$brand->id)?>"><i class="icon-pencil"></i></a>
+                            <a href="<?=site_url('BrandManagement/edit/'.$brand->id)?>">edit</a>
 
-                            <a href="<?=site_url('BrandManagement/delete/'.$brand->id)?>" role="button" class="btnDelete"><i class="icon-remove"></i></a>
+                            <a href="<?=site_url('BrandManagement/delete/'.$brand->id)?>" role="button" class="btnDelete"></a>
                         </td>
                     </tr>
                     <?php

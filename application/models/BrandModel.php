@@ -37,5 +37,28 @@ class BrandModel extends CI_Model
             return $q->result();
         return false;
     }
+    function getDevices($brandID,$numberOfDevices2Fetch)
+    {
+        $query="SELECT device.id as deviceID,
+        dev4Sale.id as device4SaleID,
+        dev4Sale.price,
+        device.name as deviceName,
+        brand.name as brandName,
+        brand.photo as brandPhoto,
+        device.photo as devicePhoto
+        FROM `device-for-sale` dev4Sale
+        LEFT JOIN device ON device.id=dev4Sale.deviceID
+        LEFT JOIN brand ON brand.id=device.brandID
+        LEFT JOIN `device-type` devType ON devType.id=device.deviceTypeID
+        WHERE
+        dev4Sale.isNew=1 AND
+        devType.name='Mobile' AND
+        brand.id=$brandID LIMIT ".$numberOfDevices2Fetch.";";
+        //echo $query;
+        $res=$this->db->query($query);
+        if($res->num_rows()>0)
+            return $res->result();
+        return false;
+    }
 
 }

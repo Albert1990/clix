@@ -35,7 +35,7 @@ class DeviceAttributeTypeManagement extends MY_Controller
 	function index($message = array()){
 
 		if(is_array($message) && !empty($message)){
-			$data['message'] = $message;
+			$this->data['message'] = $message;
 		}
 
 		$tables_to_join = array(
@@ -51,8 +51,8 @@ class DeviceAttributeTypeManagement extends MY_Controller
 					),
 			);
 		$select = 'device-attribute-type.id,device-type.name,device-attribute.enName,device-attribute.arName';
-		$data['items'] = $this->deviceModel->getAll('device-attribute-type',$tables_to_join,$select);
-		$this->load->template($this->viewDirectoryName.'/index.php',$data);
+		$this->data['items'] = $this->deviceModel->getAll('device-attribute-type',$tables_to_join,$select);
+		$this->load->template($this->viewDirectoryName.'/index.php',$this->data);
 	}
 
 	/**
@@ -69,7 +69,7 @@ class DeviceAttributeTypeManagement extends MY_Controller
 		$attributes = $this->deviceModel->getAll('device-attribute');
 		if($attributes){
 			foreach ($attributes as $attr) {
-				$data['attributes'][$attr->id] = $attr->enName;	
+				$this->data['attributes'][$attr->id] = $attr->enName;	
 			}
 
 		}
@@ -77,11 +77,11 @@ class DeviceAttributeTypeManagement extends MY_Controller
 		$devices = $this->deviceModel->getAll('device-type');
 		if($devices){
 			foreach ($devices as $device) {
-				$data['devices'][$device->id] = $device->name;
+				$this->data['devices'][$device->id] = $device->name;
 			}
 		}
 
-		$this->load->template($this->viewDirectoryName.'/create.php',$data);
+		$this->load->template($this->viewDirectoryName.'/create.php',$this->data);
 	}
 
 
@@ -178,25 +178,25 @@ class DeviceAttributeTypeManagement extends MY_Controller
 			$post_id = $this->uri->segment(3);
 		}
 
-		$data['item'] = $this->deviceModel->get('device-attribute-type',array('id'=>$post_id));
+		$this->data['item'] = $this->deviceModel->get('device-attribute-type',array('id'=>$post_id));
 		
-		if($data['item']){
+		if($this->data['item']){
 
 			$devices = $this->deviceModel->getAll('device-type');
 			if($devices){
 				foreach ($devices as $device) {
-					$data['devices'][$device->id] = $device->name;	
+					$this->data['devices'][$device->id] = $device->name;	
 				}
 			}
 
 			$attributes = $this->deviceModel->getAll(' device-attribute');
 			if($attributes){
 				foreach ($attributes as $attr) {
-					$data['attributes'][$attr->id] = $attr->enName;
+					$this->data['attributes'][$attr->id] = $attr->enName;
 				}
 			}
 
-			$this->load->template($this->viewDirectoryName.'/edit.php',$data);
+			$this->load->template($this->viewDirectoryName.'/edit.php',$this->data);
 
 		}else{
 			$action_message = array(

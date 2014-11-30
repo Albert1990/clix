@@ -7,7 +7,7 @@
     <file path="/brain_managment.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410735617296" ignored="false" />
     <file path="/advertisemnet_managment.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410736373512" ignored="false" />
     <file path="/MY_Controller.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1414860540018" ignored="false" />
-    <file path="/a.dummy" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1414860000800" ignored="false" />
+    <file path="/a.dummy" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1417279692724" ignored="false" />
     <file path="/DeviceAttributeManagment.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410736168758" ignored="false" />
     <file path="/NewsManagment.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410736458309" ignored="false" />
     <file path="/OfferManagment.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410736288711" ignored="false" />
@@ -15,8 +15,8 @@
     <file path="/DeviceAttributeManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410736447426" ignored="false" />
     <file path="/OfferManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410736467476" ignored="false" />
     <file path="/SliderManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411267232366" ignored="false" />
-    <file path="/BrandModel.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411057848474" ignored="false" />
-    <file path="/index.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1415994311085" ignored="false" />
+    <file path="/BrandModel.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1417368936195" ignored="false" />
+    <file path="/index.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1417372642321" ignored="false" />
     <file path="/AdvertisementModel.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1410827243014" ignored="false" />
     <file path="/AdvertisementManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411245159100" ignored="false" />
     <file path="/MY_Loader.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1414859380095" ignored="false" />
@@ -28,10 +28,10 @@
     <file path="/create.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1415903688372" ignored="false" />
     <file path="/NewsModel.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411236977729" ignored="false" />
     <file path="/NewsManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411244791386" ignored="false" />
-    <file path="/Home.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1414887618405" ignored="false" />
+    <file path="/Home.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1417369770795" ignored="false" />
     <file path="/edit.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411269293308" ignored="false" />
     <file path="/sidebar.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1415995696560" ignored="false" />
-    <file path="/UserCartManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1416004121947" ignored="false" />
+    <file path="/UserCartManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1417280150357" ignored="false" />
     <file path="/UserCartModel.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1416006962068" ignored="false" />
     <file path="/main.js" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1413849546834" ignored="false" />
     <file path="/SliderModel.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411268710740" ignored="false" />
@@ -41,7 +41,7 @@
     <file path="$PROJECT_DIR$/../5ednym3ak1/ci/application/models/users_model.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1414926534948" ignored="false" />
     <file path="/UserManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1411414312298" ignored="false" />
     <file path="/UserModel.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1413658044294" ignored="false" />
-    <file path="/Dummy.txt" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1416104541096" ignored="false" />
+    <file path="/Dummy.txt" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1417279332147" ignored="false" />
     <file path="/HomeManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1415900508654" ignored="false" />
     <file path="/users_model.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1414926534600" ignored="false" />
     <file path="$PROJECT_DIR$/../5ednym3ak1/node/updateMyPosition.js" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1414925342496" ignored="false" />
@@ -125,8 +125,8 @@
     <file path="/AttributeGroupManager.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1414837452139" ignored="false" />
     <file path="/MY_HomeController.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1414859146489" ignored="false" />
     <file path="/MY_Home_Controller.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1414860013644" ignored="false" />
-    <file path="/start1.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1414878491778" ignored="false" />
-    <file path="/deviceModel.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1414861430085" ignored="false" />
+    <file path="/start1.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1417370980158" ignored="false" />
+    <file path="/deviceModel.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1417369262355" ignored="false" />
     <file path="/home.js" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1415914173509" ignored="false" />
     <file path="$PROJECT_DIR$/../nasbat/ci/application/models/PostTag.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1414887443754" ignored="false" />
     <file path="/PostTag.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1414886159780" ignored="false" />
@@ -136,6 +136,14 @@
     <file path="/accessoireManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1415904994900" ignored="false" />
     <file path="/UserCart.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1416006949077" ignored="false" />
     <file path="/userCartManager.js" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1415994391038" ignored="false" />
+    <file path="/deviceManagement.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1417279660729" ignored="false" />
+    <file path="/showProcessed.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1417280635680" ignored="false" />
+    <file path="/script.js" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1417372484248" ignored="false" />
+    <file path="/header1.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1417371817666" ignored="false" />
+    <file path="/Brand.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1417366873360" ignored="false" />
+    <file path="/filtersPanel.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1417367457168" ignored="false" />
+    <file path="/config.php" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1417366719585" ignored="false" />
+    <file path="/modified.css" changelist="5a75d9bc-ea0e-41a1-814e-710293041f9b" time="1417371872691" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,64 +163,97 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserCartManagement.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/UserCartManagement.php">
+      <file leaf-file-name="script.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="50" selection-start="1085" selection-end="1100" vertical-scroll-proportion="0.0">
+            <state line="46" column="24" selection-start="1403" selection-end="1403" vertical-scroll-proportion="0.30544746">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showProcessed.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/UserCartManagement/showProcessed.php">
+      <file leaf-file-name="modified.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/modified.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="33" selection-start="748" selection-end="748" vertical-scroll-proportion="0.0">
+            <state line="6" column="17" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserCart.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/UserCart.php">
+      <file leaf-file-name="start1.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/templates/start1.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="31" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.79096043">
+            <state line="95" column="0" selection-start="4262" selection-end="4262" vertical-scroll-proportion="-0.4117647">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#nav#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Home.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="42" selection-start="1488" selection-end="1488" vertical-scroll-proportion="-9.923077">
+              <folding>
+                <element signature="e#6#163#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/Home/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="69" selection-start="1198" selection-end="1198" vertical-scroll-proportion="-7.3076925">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/templates/sidebar.php">
+      <file leaf-file-name="Brand.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Brand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="66" selection-start="2510" selection-end="2510" vertical-scroll-proportion="0.0">
+            <state line="20" column="49" selection-start="466" selection-end="466" vertical-scroll-proportion="-5.1923075">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserCartModel.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/UserCartModel.php">
+      <file leaf-file-name="filtersPanel.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/templates/filtersPanel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="31" selection-start="2988" selection-end="2988" vertical-scroll-proportion="0.0">
+            <state line="14" column="39" selection-start="597" selection-end="597" vertical-scroll-proportion="-7.1923075">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userCartManager.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/userCartManager.js">
+      <file leaf-file-name="deviceModel.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/deviceModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="33" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0">
+            <state line="111" column="2" selection-start="2791" selection-end="2791" vertical-scroll-proportion="-0.65384614">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showUnprocessed.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/UserCartManagement/showUnprocessed.php">
+      <file leaf-file-name="BrandModel.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/BrandModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="14" selection-start="2371" selection-end="2371" vertical-scroll-proportion="0.0">
+            <state line="43" column="23" selection-start="1267" selection-end="1267" vertical-scroll-proportion="-7.3076925">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header1.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/templates/header1.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="68" selection-start="696" selection-end="696" vertical-scroll-proportion="-5.1923075">
               <folding />
             </state>
           </provider>
@@ -236,31 +277,31 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
-        <option value="$PROJECT_DIR$/application/views/deviceAtrributeManagement/create.php" />
-        <option value="$PROJECT_DIR$/application/views/deviceAttributeManagement/create.php" />
-        <option value="$PROJECT_DIR$/application/controllers/attributeTypeManagement.php" />
-        <option value="$PROJECT_DIR$/application/controllers/attributeUnitManagement.php" />
-        <option value="$PROJECT_DIR$/application/views/attributeUnitManagement/create.php" />
-        <option value="$PROJECT_DIR$/application/controllers/accessoireManagement.php" />
-        <option value="$PROJECT_DIR$/application/views/templates/header.php" />
-        <option value="$PROJECT_DIR$/js/home.js" />
-        <option value="$PROJECT_DIR$/application/views/UserCartManagement/index.php" />
-        <option value="$PROJECT_DIR$/js/userCartManager.js" />
-        <option value="$PROJECT_DIR$/application/views/templates/sidebar.php" />
         <option value="$PROJECT_DIR$/application/controllers/UserCartManagement.php" />
-        <option value="$PROJECT_DIR$/application/views/UserCartManagement/showProcessed.php" />
-        <option value="$PROJECT_DIR$/application/controllers/UserCart.php" />
-        <option value="$PROJECT_DIR$/application/models/UserCartModel.php" />
+        <option value="$PROJECT_DIR$/application/views/templates/home.php" />
+        <option value="$PROJECT_DIR$/application/views/deviceManagement/step_2.php" />
+        <option value="$PROJECT_DIR$/application/views/BrandManagement/index.php" />
+        <option value="$PROJECT_DIR$/application/views/Brand/index.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Brand.php" />
+        <option value="$PROJECT_DIR$/application/views/templates/filtersPanel.php" />
+        <option value="$PROJECT_DIR$/application/models/BrandModel.php" />
+        <option value="$PROJECT_DIR$/application/models/deviceModel.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Home.php" />
+        <option value="$PROJECT_DIR$/application/views/templates/start1.php" />
+        <option value="$PROJECT_DIR$/application/views/templates/header1.php" />
+        <option value="$PROJECT_DIR$/css/modified.css" />
+        <option value="$PROJECT_DIR$/application/views/Home/index.php" />
+        <option value="$PROJECT_DIR$/js/script.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1292" />
-    <option name="height" value="776" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1278" />
+    <option name="height" value="758" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -288,6 +329,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -310,6 +352,52 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="clix" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="clix" />
@@ -410,7 +498,113 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deviceManagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BrandManagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Brand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -432,26 +626,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../5ednym3ak1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nasbat" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\wamp\www\clix\css" />
+      <recent name="D:\wamp\www\clix\application\views\Brand" />
       <recent name="D:\wamp\www\clix\application\views\UserCartManagement" />
       <recent name="D:\wamp\www\clix\application\views" />
       <recent name="D:\wamp\www\clix\application\controllers" />
-      <recent name="D:\wamp\www\clix\application\views\HomeManagement" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\wamp\www\clix\application\views\Home" />
     </key>
   </component>
   <component name="RunManager">
@@ -474,14 +689,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1292" height="776" extended-state="0" />
-    <editor active="false" />
+    <frame x="1" y="1" width="1278" height="758" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31382114" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31907895" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -557,96 +772,122 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/controllers/attributeTypeManagement.php">
+    <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="7" selection-start="875" selection-end="875" vertical-scroll-proportion="-18.307692" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/BrandManagement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="9" selection-start="286" selection-end="288" vertical-scroll-proportion="-3.3921568" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/deviceManagement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="0" selection-start="2701" selection-end="2701" vertical-scroll-proportion="-12.576923" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/DeviceAttributeManagement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="24" selection-start="1691" selection-end="1691" vertical-scroll-proportion="-12.076923" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="2" selection-start="762" selection-end="762" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/sidebar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="66" selection-start="2510" selection-end="2510" vertical-scroll-proportion="0.0">
+        <state line="24" column="29" selection-start="710" selection-end="710" vertical-scroll-proportion="-7.1923075">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/UserCartManagement/showUnprocessed.php">
+    <entry file="file://$PROJECT_DIR$/clix/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="14" selection-start="2371" selection-end="2371" vertical-scroll-proportion="0.0">
+        <state line="84" column="6" selection-start="2461" selection-end="2461" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/userCartManager.js">
+    <entry file="file://$PROJECT_DIR$/application/controllers/attributeUnitManagement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="33" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0">
+        <state line="18" column="4" selection-start="647" selection-end="786" vertical-scroll-proportion="-11.769231">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/UserCartManagement/showProcessed.php">
+    <entry file="file://$PROJECT_DIR$/application/models/AdvertisementModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="33" selection-start="748" selection-end="748" vertical-scroll-proportion="0.0">
+        <state line="45" column="1" selection-start="1338" selection-end="1338" vertical-scroll-proportion="-16.307692">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/UserCartManagement.php">
+    <entry file="file://$PROJECT_DIR$/application/views/Brand/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="50" selection-start="1085" selection-end="1100" vertical-scroll-proportion="0.0">
+        <state line="17" column="27" selection-start="919" selection-end="919" vertical-scroll-proportion="-11.115385">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="76" selection-end="76" vertical-scroll-proportion="-0.65384614">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/UserCartModel.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/Brand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="31" selection-start="2988" selection-end="2988" vertical-scroll-proportion="0.0">
+        <state line="20" column="49" selection-start="466" selection-end="466" vertical-scroll-proportion="-5.1923075">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/UserCart.php">
+    <entry file="file://$PROJECT_DIR$/application/models/BrandModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="31" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.79096043">
+        <state line="43" column="23" selection-start="1267" selection-end="1267" vertical-scroll-proportion="-7.3076925">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/deviceModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="2" selection-start="2791" selection-end="2791" vertical-scroll-proportion="-0.65384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/templates/header1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="68" selection-start="696" selection-end="696" vertical-scroll-proportion="-5.1923075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/modified.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="17" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/templates/start1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="0" selection-start="4262" selection-end="4262" vertical-scroll-proportion="-0.4117647">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#nav#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/templates/filtersPanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="39" selection-start="597" selection-end="597" vertical-scroll-proportion="-7.1923075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="42" selection-start="1488" selection-end="1488" vertical-scroll-proportion="-9.923077">
+          <folding>
+            <element signature="e#6#163#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Home/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="69" selection-start="1198" selection-end="1198" vertical-scroll-proportion="-7.3076925">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="24" selection-start="1403" selection-end="1403" vertical-scroll-proportion="0.30544746">
           <folding />
         </state>
       </provider>

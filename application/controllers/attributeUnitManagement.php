@@ -35,11 +35,11 @@ class attributeUnitManagement extends MY_Controller
 	function index($message = array()){
 
 		if(is_array($message) && !empty($message)){
-			$data['message'] = $message;
+			$this->data['message'] = $message;
 		}
 
-		$data['units'] = $this->deviceModel->getAll('device-attribute-unit');
-		$this->load->template($this->viewDirectoryName.'/index.php',$data);
+		$this->data['units'] = $this->deviceModel->getAll('device-attribute-unit');
+		$this->load->template($this->viewDirectoryName.'/index.php',$this->data);
 	}
 
 	/**
@@ -143,11 +143,11 @@ class attributeUnitManagement extends MY_Controller
 			$post_id = $this->uri->segment(3);
 		}
 
-		$data['unit'] = $this->deviceModel->get('device-attribute-unit',array('id'=>$post_id));
+		$this->data['unit'] = $this->deviceModel->get('device-attribute-unit',array('id'=>$post_id));
 		
-		if($data['unit']){
+		if($this->data['unit']){
 
-			$this->load->template($this->viewDirectoryName.'/edit.php',$data);
+			$this->load->template($this->viewDirectoryName.'/edit.php',$this->data);
 
 		}else{
 			$action_message = array(

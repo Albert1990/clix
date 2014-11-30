@@ -82,6 +82,49 @@ class deviceModel extends CI_Model{
 		return false;
 	}
 
+//    function getLastDevicesInBrand($brandID)
+//    {
+//        $query="SELECT dev4Sale.id as device4SaleID,
+//        dev4Sale.price,
+//        device.id as deviceID,
+//        device.name as deviceName,
+//        brand.name as brandName,
+//        brand.photo as brandPhoto,
+//        device.photo as devicePhoto
+//        FROM `device-for-sale` dev4Sale
+//        LEFT JOIN device ON device.id=dev4Sale.deviceID
+//        LEFT JOIN brand ON brand.id=device.brandID
+//        LEFT JOIN `device-type` devType ON devType.id=device.deviceTypeID
+//        WHERE
+//        dev4Sale.isNew=1 AND
+//        devType.name='Mobile' AND
+//        brand.id=$brandID LIMIT 6;";
+//        //echo $query;
+//
+//        $res=$this->db->query($query);
+//        if($res->num_rows()>0)
+//            return $res->result();
+//        return false;
+//    }
+
+    function getDeviceOverview($deviceID)
+    {
+        $query="SELECT devProp.value,
+        devAttr.enName as name,
+        devAttrUnit.name as unitName
+        FROM `device-property` devProp
+        LEFT JOIN `device-attribute` devAttr ON devAttr.id=devProp.deviceAttributeID
+        LEFT JOIN `device-attribute-unit` devAttrUnit ON devAttrUnit.id=devAttr.deviceAttributeUnitID
+        WHERE
+        devProp.deviceID=$deviceID AND
+        devAttr.isImportant=1;";
+        //echo $query;
+        $res=$this->db->query($query);
+        if($res->num_rows())
+            return $res->result();
+        return false;
+    }
+
 	function get_last($table='device'){
 
 		$q = $this->db->query("SELECT * FROM $table ORDER BY id DESC LIMIT 1");

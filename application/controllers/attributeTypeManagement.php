@@ -35,11 +35,11 @@ class attributeTypeManagement extends MY_Controller
 	function index($message = array()){
 
 		if(is_array($message) && !empty($message)){
-			$data['message'] = $message;
+			$this->data['message'] = $message;
 		}
 
-		$data['types'] = $this->deviceModel->getAll('attribute-type');
-		$this->load->template($this->viewDirectoryName.'/index.php',$data);
+		$this->data['types'] = $this->deviceModel->getAll('attribute-type');
+		$this->load->template($this->viewDirectoryName.'/index.php',$this->data);
 	}
 
 	/**
@@ -133,11 +133,11 @@ class attributeTypeManagement extends MY_Controller
 			$post_id = $this->uri->segment(3);
 		}
 
-		$data['type'] = $this->deviceModel->get('attribute-type',array('id'=>$post_id));
+		$this->data['type'] = $this->deviceModel->get('attribute-type',array('id'=>$post_id));
 		
-		if($data['type']){
+		if($this->data['type']){
 
-			$this->load->template($this->viewDirectoryName.'/edit.php',$data);
+			$this->load->template($this->viewDirectoryName.'/edit.php',$this->data);
 
 		}else{
 			$action_message = array(
